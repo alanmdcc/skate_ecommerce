@@ -1,0 +1,140 @@
+.small-circle{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.middle-circle{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.big-circle{
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+}
+
+
+.blue-mask{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #0c5485;
+    opacity: 0.5;
+}
+
+.blue-mask:hover{
+    display: none;
+}
+.orange-mask{
+    background-color: #ff6b08;
+    opacity: 0.75;
+}
+
+.yellow-mask{
+    background-color: #ffe726;
+    opacity: 0.75;
+}
+
+#small-circle-1{
+    top: 84px;
+    left: 62px;
+    background-color: #12231d;
+}
+
+#small-circle-2{
+    top: 60px;
+    left: 422px;
+    background-color: #ffe726;
+
+}
+
+#small-circle-3{
+    top: 27px;
+    left: 732px;
+    background-color: #ffe726;
+
+}
+
+#small-circle-4{
+    top: 350px;
+    left: 873px;
+    background-color: #12231d
+}
+
+#middle-circle-1{
+    top: 39px;
+    left: 190px;
+    background-color: #ff6b08;
+}
+
+#middle-circle-2{
+    top: 231px;
+    left: 84px;
+    background-color: #ffe726;
+}
+
+#middle-circle-3{
+    top: 465px;
+    left: 67px;
+    background-color: #0c5485;
+}
+
+#middle-circle-4{
+    top: 513px;
+    left: 299px;
+    background-color: #ff6b08;
+}
+
+#middle-circle-5{
+    top: 459px;
+    left: 530px;
+    background-color: #0c5485;
+}
+
+#middle-circle-6{
+    top: 293px;
+    left: 638px;
+    background-color: #ff6b08;
+}
+
+#middle-circle-7{
+    top: 105px;
+    left: 564px;
+    background-color: #12231d
+}
+
+#middle-circle-8{
+    top: 120px;
+    left: 782px;
+    background-color: #ff6b08;
+}
+
+#middle-circle-9{
+    top: 491px;
+    left: 764px;
+    background-color: #ffe726;
+}
+
+#big-circle-1{
+    top: 216px;
+    left: 294px;
+    overflow: hidden;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#big-circle-1:hover{
+    top: 201px;
+    left: 279px;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
