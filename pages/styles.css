@@ -1,0 +1,47 @@
+/*#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.figure{
+    background-color: blue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: none;
+}
+
+
+.change-size:focus{
+    animation-name: size;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes size {
+    100%{
+        width: 200px;
+        height: 200px;
+    }
+    
+}*/
+
+
+
+    .zoom {
+        transition: transform .2s; 
+    }
+     
+    .zoom:hover {
+        transform: scale(1.2); 
+    }
+
+    .gris{
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(.9); /* W3C */
+    }
+    
