@@ -1,0 +1,35 @@
+.navbar-polygon-shape{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 26.36% 25%, 32.22% 100%, 0% 100%);
+    background-color: black;
+}
+
+.navbar-config{
+    position: relative;
+    margin-top: 20px;
+    padding: .5rem 1rem;
+    padding-bottom: 6px;
+    z-index: 1010;
+}
+
+.btn-search{
+    background-color: #FAED26;
+}
+
+.btn-icon{
+    width: 45px;
+    height: 45px;
+    background-color: #FAED26;
+    object-fit: contain;
+    padding: 8px;
+}
+
+@media screen and (max-width: 900px){
+    .navbar-config{
+        margin-top: 18px;
+        padding: 3px;
+    }
+}
