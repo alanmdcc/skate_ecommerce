@@ -1,0 +1,75 @@
+#main{
+    width:100vw;
+    height:100vh;
+}
+
+/*Class for the cover when nothing is focused*/
+.cover{
+    width:100vw;
+    height:100vh;
+    background-color: transparent;
+    position: absolute;
+}
+
+/*Class for the cover to turn black when an element is focused*/
+.bg-black{
+    animation-name: black-cover;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+/*Animation for a soft shift to a black cover*/
+@keyframes black-cover {
+    100%{
+        z-index: 1;
+        background-color: rgba(0,0,0,0.8);
+        
+    }
+    
+}
+
+/*Class for the container that includes the image and the text card*/
+.container-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width:300px;
+    height: fit-content;
+    padding: 0px;
+    
+}
+
+/*Allow the focused container to not be covered by the black cover*/
+.container-focus{
+    z-index: 2;
+}
+
+/*Class for the picture*/
+.figure{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/profile_picture.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Hover class for the picture*/
+.change-size-hover:hover {
+    transform: scale(1.1);
+}
+
+/*Increase size of the picture when it is focused*/
+.change-size{
+    transition: transform .2s;
+    transform: scale(1.8);
+    margin-bottom: 50px;
+}
+
+/*Class to hide the card before it is focused*/
+.hide{
+display: none;
+
+}
