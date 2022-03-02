@@ -8,12 +8,10 @@
     let imagen1 = document.getElementById("img1");
     let bntOcultar1= document.getElementById("btn2")
 
-    /*function ocultar(){
-        document.getElementById('esconder').style.display = 'none';
-        }
-    function mostrar(){
-        document.getElementById('esconder').style.display = 'block';
-        }*/
+    let boton=document.querySelectorAll(".boton")
+    let picture=document.querySelectorAll(".picture");
+    let card=document.querySelectorAll(".card-body");
+
 
     imagen.addEventListener("click", function(e){
       infoEscondida.classList.remove("hide");
@@ -27,21 +25,27 @@
 
     imagen1.addEventListener("click", function(e){
         infoEscondida1.classList.remove("hide");
-  
+        imagen1.classList.remove("gris");
       })
   
       bntOcultar1.addEventListener("click", function(e){
           infoEscondida1.classList.add("hide");
-  
+          imagen1.classList.add("gris");
       })
-    
-    /*image.addEventListener("focus",function(e){
-        carta.classList.remove("hide");
-    })
-    
-    image.addEventListener("blur",function(e){
-        carta.classList.add("hide");
-    })*/
-
-
    
+/*
+      picture.forEach(function(el) {
+        el.addEventListener("click", function(e){
+         //------
+         card.forEach(function(el) {
+             
+            el.classList.remove("hide")
+          
+      
+         }); 
+         //------ 
+      });
+    
+    });
+    
+  */

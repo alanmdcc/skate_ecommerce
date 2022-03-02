@@ -14,47 +14,83 @@
       }
       .hide{display: none;}
       .hide2{display: none;}
-
-      .change-size:focus{
-    animation-name: size;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-     }
-
-    @keyframes size {
-    100%{
-        width: 200px;
-        height: 200px;
-    }
-    
-    }
+      .align{align-items: center;
+        padding-top: 50px;}
     </style>
     <main id="main">
-    <div class="figure change-size container" style="width: 18rem;" id="carta">
-        <img src="./tesla.jpg" class="card-img-top circle change-size zoom gris" alt="..." height="200" width="150" id="img">
-        <div class="card-body hide" id="esconder">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary" id="btn1">Ocultar</a>
+      <div class="row align">
+        <div class="col">
+          <div class="container" style="width: 18rem;" id="carta">
+            <img src="./tesla.jpg" class="card-img-top circle change-size zoom gris picture" alt="..." height="200" width="150" id="img">
+            <div class="card-body hide carta" id="esconder">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary" id="btn1">Ocultar</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="container" style="width: 18rem;" id="carta1">
-        <img src="./tesla.jpg" class="card-img-top circle change-size zoom gris" alt="..." height="200" width="150" id="img1">
-        <div class="card-body hide" id="esconder1">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary" id="btn2">Ocultar</a>
+      <div class="row align">
+        <div class="col">
+          <div class="container" style="width: 18rem;" id="carta">
+            <img src="./tesla.jpg" class="card-img-top circle change-size zoom gris" alt="..." height="200" width="150" id="img1">
+            <div class="card-body hide" id="esconder1">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary" id="btn2">Ocultar</a>
+            </div>
+          </div><!---->
+        </div>
+        <div class="col">
+          <div class="container" style="width: 18rem;" id="carta1">
+            <img src="./tesla.jpg" class="card-img-top circle change-size zoom gris picture" alt="..." height="200" width="150" id="img2">
+            <div class="card-body hide" id="esconder2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary boton" id="btn3">Ocultar</a>
+            </div>
+          </div><!---->
+        </div>
+       </div>
+
+        <div class="row align">
+          <div class="col">
+            <div class="container" style="width: 18rem;" id="carta">
+              <img src="./tesla.jpg" class="card-img-top circle change-size zoom gris picture" alt="..." height="200" width="150" id="img">
+              <div class="card-body hide" id="esconder">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary boton" id="btn1">Ocultar</a>
+              </div>
+            </div><!---->
+          </div>
+          <div class="col">
+            <div class="container" style="width: 18rem;" id="carta1">
+              <img src="./tesla.jpg" class="card-img-top circle change-size zoom gris picture" alt="..." height="200" width="150" id="img1">
+              <div class="card-body hide" id="esconder1">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary boton" id="btn2">Ocultar</a>
+              </div>
+            </div><!---->
+          </div>
+      </div>
+
+      <div class="row align">
+        <div class="col">
+          <div class="container" style="width: 18rem;" id="carta">
+            <img src="./tesla.jpg" class="card-img-top circle change-size zoom gris picture" alt="..." height="200" width="150" id="img">
+            <div class="card-body hide" id="esconder">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary boton" id="btn1">Ocultar</a>
+            </div>
+          </div>
         </div>
       </div>
-     
-      <div class="zoom">
-      <img class="zoom gris" src="./tesla.jpg" height="200" width="200" alt="imagen aleatoria con zoom">
-     </div>
 
     </main>
-
-
 
     <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
