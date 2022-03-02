@@ -2,6 +2,9 @@
 const form = document.getElementById('form-contact');
 const email = document.getElementById('email');
 
+//traer conenido de numero de telefono
+const phone= document.getElementById('Cellphone');
+
 //creamos un objeto en donde se registra el estatus de cada campo, esto lo podemos utilizar
 //cuando queramos validar con bootstrap.
 const formIsValid = {
@@ -28,5 +31,15 @@ email.addEventListener('change', (e) => {
     if(e.target.value.trim().length > 0){
         formIsValid.email = true;
         console.log('Estatus del campo: ',formIsValid.email)
+    }
+});
+
+//agrego funcion para validar numero de telefono
+
+phone.addEventListener('change', (e)=>{
+    if (phone.value.length>10){
+        window.alert('el número de teléfono no puede tener más de 10 digitos');
+    }else if (phone.value.length<=0 || phone.value.length !=10){
+        window.alert('por favor ingrese un número de teléfono válido');
     }
 });
