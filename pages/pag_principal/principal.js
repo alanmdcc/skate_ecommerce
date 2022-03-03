@@ -13,6 +13,7 @@ for (let i=0; i<=5;i++){
     cartas[i]=carta;
 }
 
+//encuentra el elemento de mayor precio
 let mayor=0;
 price.forEach(function(el) {
     if(el.textContent>mayor){
