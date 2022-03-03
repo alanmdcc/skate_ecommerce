@@ -40,7 +40,9 @@ phone.addEventListener('change', (e)=>{
         window.alert('el número de teléfono no puede tener más de 10 digitos');
     }else if (phone.value.length<=0 || phone.value.length !=10){
         window.alert('por favor ingrese un número de teléfono válido');
-    }
+    } else if (isNaN(phone.value)==true)
+        window.alert('no se pueden ingresar letras en el numero de telefono');
+    
 }); 
 
 //agrego funcion para validar nombre
@@ -48,6 +50,8 @@ phone.addEventListener('change', (e)=>{
 person.addEventListener('change', (e) => {
     if(person.value.length > 35) {
         window.alert('El nombre no puede contener más de 35 caracteres.')
-    } else if (person.value.length < 7)
+       
+    } else if (person.value.length < 7){
     window.alert('El nombre debe contenr al menos un nombre y un apellido separados por un espacio.')
+    } 
 });
