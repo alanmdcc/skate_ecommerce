@@ -27,6 +27,14 @@
     padding: 8px;
 }
 
+.btn-logo{
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    object-fit: contain;
+    padding: 0px;
+}
+
 @media screen and (max-width: 900px){
     .navbar-config{
         margin-top: 18px;
