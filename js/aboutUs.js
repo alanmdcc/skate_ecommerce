@@ -14,9 +14,11 @@ function changeToBlur(container){//Specifiy the changes when a focus container c
     cover.classList.remove("bg-black"); //Return the cover to transparent
     img.classList.remove("change-size"); //Return the image to the original size
     img.classList.add("change-size-hover"); //Return the hover change size property to the image
-    img.classList.add("change-size-decrease") //PENDING DEFINE CLASS
-    container.classList.remove("bg-dark")
-    img.classList.remove("img-shadow-box")
+    img.classList.add("change-size-decrease"); //Animation to turn the image to its original class
+    container.classList.remove("bg-dark");
+    cover.classList.add("bg-black-reverse");//Animation to turn the cover from black to transparent
+    img.classList.remove("img-shadow-box");
+    container.classList.remove("move-container"); 
 };//changeToBlur
 
 function changeToFocus(container){//Specifiy the changes when an image is focused
@@ -28,8 +30,11 @@ function changeToFocus(container){//Specifiy the changes when an image is focuse
     containerText.classList.remove("hide"); //Make appear the card
     container.classList.add("container-focus"); //Change the z-index in the focused container to not be covered by the black cover
     cover.classList.add("bg-black"); //Transition of the cover to black to cover the blurred elements
-    container.classList.add("bg-dark")
-    img.classList.add("img-shadow-box")
+    img.classList.remove("change-size-decrease");
+    cover.classList.remove("bg-black-reverse");
+    container.classList.add("bg-dark"); //Animation to turn the cover to black
+    img.classList.add("img-shadow-box"); //Add a shadow to the image when focused
+    container.classList.add("move-container"); //Move the container to the center
 };//changeToFocus
 
 //Apply a focus event to all the images
@@ -69,13 +74,13 @@ for(let ctn of containerProfile){
     })
 }; //for(let ctn of containerProfile)
 
-//Aply a click event to all the buttons to return the page to a blur state
+/* //Aply a click event to all the buttons to return the page to a blur state
 for(let btn of buttonProfile){
     btn.addEventListener("click",function(e){
         let container = e.target.parentNode.parentNode.parentNode; //Get the container element
         changeToBlur(container) //Return the page to a blur state
     })
-};// for(let btn of buttonProfile)
+};// for(let btn of buttonProfile) */
 
 
 

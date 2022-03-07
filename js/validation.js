@@ -30,8 +30,7 @@ function validateForm(){
     const valid = formValues.findIndex((value) => value == false);
 
     if(valid === -1){
-        //form.submit(); //envia el formulario al backend
-        console.log('Envio del formulario correctamente')
+        form.submit(); //abre la aplicación de default de correo con la información del formulario
     } else{
         alert('El formulario es invalido');
     }
