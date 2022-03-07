@@ -19,6 +19,7 @@ function changeToBlur(container){//Specifiy the changes when a focus container c
     cover.classList.add("bg-black-reverse");//Animation to turn the cover from black to transparent
     img.classList.remove("img-shadow-box");
     container.classList.remove("move-container"); 
+    container.classList.add("gris");
 };//changeToBlur
 
 function changeToFocus(container){//Specifiy the changes when an image is focused
@@ -35,6 +36,7 @@ function changeToFocus(container){//Specifiy the changes when an image is focuse
     container.classList.add("bg-dark"); //Animation to turn the cover to black
     img.classList.add("img-shadow-box"); //Add a shadow to the image when focused
     container.classList.add("move-container"); //Move the container to the center
+    container.classList.remove("gris");
 };//changeToFocus
 
 //Apply a focus event to all the images

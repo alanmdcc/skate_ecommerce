@@ -167,6 +167,11 @@ display: none;
     border-radius: 13px;
 }
 
+.gris{
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(.9); /* W3C */
+    }
 
 @media screen and (max-width:800px){
     .container-profile{
