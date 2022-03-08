@@ -20,7 +20,8 @@
 }
 
 .menu-item{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
     color: black;
 }
 
@@ -43,14 +44,7 @@
     height: 45px;
     object-fit: contain;
     padding: 8px;
-}
-
-.btn-logo{
-    width: 45px;
-    height: 45px;
-    background-color: transparent;
-    object-fit: contain;
-    padding: 0px;
+    background-color: #FAED26;
 }
 
 @media screen and (max-width: 900px){
@@ -70,14 +64,14 @@
     }
 
     .btn-icon{
-        width: 35px;
-        height: 35px;
-        object-fit: contain;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
         padding: 2px;
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 767px){
     .log-in{
         display: none;
     }
@@ -163,9 +157,15 @@
 
 }
 
+@media screen and (max-width: 425px){
+    .search-input{
+        width: 60vw;   
+    }
+}
+
 @media screen and (max-width: 380px){
     .search-input{
-        width: 225px;   
+        width: 57vw;   
     }
 
     #user{
@@ -176,9 +176,6 @@
 }
 
 @media screen and (max-width: 325px){
-    .search-input{
-        width: 180px;   
-    }
 
     #user{
         position: absolute;
