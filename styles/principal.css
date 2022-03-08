@@ -1,0 +1,74 @@
+.formato-c{
+    padding-bottom: 20px;
+}
+
+.cont-1{
+    justify-content: center;
+    padding-bottom: 40px;
+    
+}
+.container-formato{
+    
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    
+}
+.news{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+
+    margin: auto;
+}
+.news img{
+ padding: 20px;
+ position: relative;
+ margin-left: 0%;
+/* align-self:start;
+ margin: auto;*/
+}
+.center {
+    margin: auto;
+    width: 60%;
+    height: 156px;
+    color: rgb(255, 254, 254);
+    /*border: 3px solid #73AD21;*/
+    padding: 10px;
+    background-image: url(../assets/pag-principal/atardecer.jpg);
+}
+.btn-primary{
+    background-color: rgb(0, 0, 0);
+    border-color: #fff;
+}
+
+h2 {
+    font: 17px sans-serif;
+    margin-top: 30px;
+    text-align: center;
+  }
+  h2.linea {
+    position: relative;
+    z-index: 1;
+  }
+  h2.linea:before {
+    border-top: 2px solid #610a0a;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+  }
+  h2.linea span {
+  
+    background: #fff;
+    padding: 0 15px;
+  }
