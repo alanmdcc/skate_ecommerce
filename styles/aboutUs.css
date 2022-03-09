@@ -1,3 +1,27 @@
+#gerardo-circle{
+
+}
+
+#julio-circle{
+
+}
+
+#david-circle{
+    background-image: url(../assets/about-us-pictures/david.jpg);
+}
+
+#manuel-circle{
+
+}
+
+#alan-circle{
+    background-image: url(../assets/about-us-pictures/alan.jpg);
+}
+
+#andres-circle{
+
+}
+
 #main{
     position: relative;
 }
@@ -83,14 +107,12 @@
     border-radius: 50%;
     width: 180px;
     height: 180px;
-    background-image: url(../assets/about-us-pictures/alan.jpg);
+    background-image: url(../assets/img/generation-mexico.png);
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
 }
-#circulo-david{
-    background-image: url(../assets/about-us-pictures/david.jpg);
-}
+
 
 /*Hover class for the picture*/
 .change-size-hover:hover {
