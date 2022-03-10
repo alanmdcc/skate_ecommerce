@@ -18,8 +18,8 @@ function changeToBlur(container){//Specifiy the changes when a focus container c
     container.classList.remove("bg-dark");
     cover.classList.add("bg-black-reverse");//Animation to turn the cover from black to transparent
     img.classList.remove("img-shadow-box");
-    container.classList.remove("move-container"); 
-    container.classList.add("gris");
+    container.classList.remove("move-container");
+    container.classList.add("gray");
 };//changeToBlur
 
 function changeToFocus(container){//Specifiy the changes when an image is focused
@@ -36,43 +36,48 @@ function changeToFocus(container){//Specifiy the changes when an image is focuse
     container.classList.add("bg-dark"); //Animation to turn the cover to black
     img.classList.add("img-shadow-box"); //Add a shadow to the image when focused
     container.classList.add("move-container"); //Move the container to the center
-    container.classList.remove("gris");
+    container.classList.remove("gray");
 };//changeToFocus
 
 //Apply a focus event to all the images
 for(let img of imgProfile){
     img.addEventListener("focus",function(e){
-        let container = e.target.parentNode; //Get the container
-        let img = e.target; //Get the image
-       
-        if(img.classList.contains("flag")){ //The flag class purpose is to evaluate if the image's container is alredy focused, if it is the changeToFocus won't be triggered
-            img.classList.remove("flag"); //Remove the flag class so the changeToFocus can be triggered again
-            img.blur(); //Change the image to blur so the changeToFocus can be triggered again
-        }else{
-            changeToFocus(container); //Change the page to a focused state
-            img.classList.add("flag"); //Add the flag class so the changeToFocus won't be triggered if the image is clicked again
-            container.focus(); //Change the focus to the container so its content can be clicked without dissapering
-        };
+        let width = window.matchMedia("(max-width: 576px)");
+        if (width.matches){}else{
+            let container = e.target.parentNode; //Get the container
+            let img = e.target; //Get the image
+        
+            if(img.classList.contains("flag")){ //The flag class purpose is to evaluate if the image's container is alredy focused, if it is the changeToFocus won't be triggered
+                img.classList.remove("flag"); //Remove the flag class so the changeToFocus can be triggered again
+                img.blur(); //Change the image to blur so the changeToFocus can be triggered again
+            }else{
+                changeToFocus(container); //Change the page to a focused state
+                img.classList.add("flag"); //Add the flag class so the changeToFocus won't be triggered if the image is clicked again
+                container.focus(); //Change the focus to the container so its content can be clicked without dissapering
+            };
+        }
     })
 }; // for(let img of imgProfile)
 
 //Apply a blur event to all the containers
 for(let ctn of containerProfile){
     ctn.addEventListener("blur",function(e){
+        let width = window.matchMedia("(max-width: 576px)");
+        if (width.matches){}else{
+            let container = e.target; //Get the container
+            let img = container.getElementsByClassName("img-profile")[0]; //Get the image from the container
 
-        let container = e.target; //Get the container
-        let img = container.getElementsByClassName("img-profile")[0]; //Get the image from the container
-
-        const ifButton = e.target.getElementsByClassName("card-body")[0].contains(e.relatedTarget); //Validate if the new focused element is inside the text container
-        const ifImg = e.relatedTarget === img; //Validate if the new focused element is the image
-        if(ifImg){ //If the image is clicked again the flag is not removed so the changeToFocus won't be triggered
-            changeToBlur(container); //Return the page to a blur state
-        }else if(!ifButton){ //If the element focused is outside the container the page will return to blur state
-            changeToBlur(container);//Return the page to a blur state
-            img.classList.remove("flag"); //Remove the falg so the changeToFocus can be triggered with the image
-        }else{
-            container.focus(); //Keep the focus in the container if an element inside of it is focused
-        };
+            const ifButton = e.target.getElementsByClassName("card-body")[0].contains(e.relatedTarget); //Validate if the new focused element is inside the text container
+            const ifImg = e.relatedTarget === img; //Validate if the new focused element is the image
+            if(ifImg){ //If the image is clicked again the flag is not removed so the changeToFocus won't be triggered
+                changeToBlur(container); //Return the page to a blur state
+            }else if(!ifButton){ //If the element focused is outside the container the page will return to blur state
+                changeToBlur(container);//Return the page to a blur state
+                img.classList.remove("flag"); //Remove the falg so the changeToFocus can be triggered with the image
+            }else{
+                container.focus(); //Keep the focus in the container if an element inside of it is focused
+            };
+        }
     })
 }; //for(let ctn of containerProfile)
 

@@ -18,7 +18,6 @@
     border-radius: 50%;
 }
 
-
 .blue-mask{
     position: absolute;
     width: 300px;
@@ -42,81 +41,81 @@
 
 #small-circle-1{
     top: 84px;
-    left: 62px;
+    left: 112px;
     background-color: #12231d;
 }
 
 #small-circle-2{
     top: 60px;
-    left: 422px;
+    left: 472px;
     background-color: #ffe726;
 
 }
 
 #small-circle-3{
     top: 27px;
-    left: 732px;
+    left: 782px;
     background-color: #ffe726;
 
 }
 
 #small-circle-4{
     top: 350px;
-    left: 873px;
+    left: 923px;
     background-color: #12231d
 }
 
 #middle-circle-1{
     top: -21px;
-    left: 190px;
+    left: 240px;
 }
 
 #middle-circle-2{
     top: 171px;
-    left: 84px;
+    left: 134px;
 }
 
 #middle-circle-3{
     top: 465px;
-    left: 67px;
+    left: 117px;
     background-color: #0c5485;
 }
 
 #middle-circle-4{
     top: 453px;
-    left: 299px;
+    left: 349px;
 }
 
 #middle-circle-5{
     top: 399px;
-    left: 530px;
+    left: 580px;
 }
 
 #middle-circle-6{
     top: 233px;
-    left: 638px;
+    left: 688px;
 }
 
 #middle-circle-7{
     top: 45px;
-    left: 564px;
+    left: 614px;
 }
 
 #middle-circle-8{
     top: 120px;
-    left: 782px;
+    left: 832px;
     background-color: #ff6b08;
 }
 
 #middle-circle-9{
     top: 491px;
-    left: 764px;
+    left: 814px;
     background-color: #ffe726;
 }
 
 #big-circle-1{
     top: 216px;
-    left: 294px;
+    left: 344px;
     overflow: hidden;
     object-fit: cover;
     cursor: pointer;
@@ -124,7 +123,7 @@
 
 #big-circle-1:hover{
     top: 201px;
-    left: 279px;
+    left: 329px;
     width: 300px;
     height: 300px;
 }
@@ -135,7 +134,384 @@
 
 .hide{display: none;}/*agregué clase hide*/
 
-@media screen and (max-width:800px){
+@media screen and (max-width:1200px){
+    .small-circle{
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+    .middle-circle{
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+    }
+
+    .big-circle{
+        position: absolute;
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+    }
+
+
+    .blue-mask{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: #0c5485;
+        opacity: 0.5;
+    }
+
+    .blue-mask:hover{
+        display: none;
+    }
+    .orange-mask{
+        background-color: #ff6b08;
+        opacity: 0.75;
+    }
+
+    .yellow-mask{
+        background-color: #ffe726;
+        opacity: 0.75;
+    }
+
+    #small-circle-1{
+        top: 84px;
+        left: 32px;
+        background-color: #12231d;
+    }
+
+    #small-circle-2{
+        top: 60px;
+        left: 392px;
+        background-color: #ffe726;
+
+    }
+
+    #small-circle-3{
+        top: 27px;
+        left: 702px;
+        background-color: #ffe726;
+
+    }
+
+    #small-circle-4{
+        top: 350px;
+        left: 843px;
+        background-color: #12231d
+    }
+
+    #middle-circle-1{
+        top: -21px;
+        left: 160px;
+    }
+
+    #middle-circle-2{
+        top: 171px;
+        left: 54px;
+    }
+
+    #middle-circle-3{
+        top: 465px;
+        left: 37px;
+        background-color: #0c5485;
+    }
+
+    #middle-circle-4{
+        top: 453px;
+        left: 269px;
+    }
+
+    #middle-circle-5{
+        top: 399px;
+        left: 500px;
+    }
+
+    #middle-circle-6{
+        top: 233px;
+        left: 608px;
+    }
+
+    #middle-circle-7{
+        top: 45px;
+        left: 534px;
+    }
+
+    #middle-circle-8{
+        top: 120px;
+        left: 752px;
+        background-color: #ff6b08;
+    }
+
+    #middle-circle-9{
+        top: 491px;
+        left: 734px;
+        background-color: #ffe726;
+    }
+
+    #big-circle-1{
+        top: 216px;
+        left: 264px;
+        overflow: hidden;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    #big-circle-1:hover{
+        top: 201px;
+        left: 249px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .container-circles{
+        height: 720px;
+    }
+
+    .hide{display: none;}/*agregué clase hide*/
+}
+
+@media screen and (max-width:992px){
+    .small-circle{
+        width: 70px;
+        height: 70px;
+    }
+
+    .middle-circle{
+        width: 140px;
+        height: 140px;
+    }
+    
+    .big-circle{
+        width: 240px;
+        height: 240px;
+    }
+    
+    
+    .blue-mask{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: #0c5485;
+        opacity: 0.5;
+    }
+
+    #small-circle-1{
+        top: 540px;
+        left: 500px;
+        background-color: #12231d;
+    }
+    
+    #small-circle-2{
+        top: 50px;
+        left: 430px;
+        background-color: #ffe726;
+    
+    }
+    
+    #small-circle-3{
+        top: 590px;
+        left: 390px;
+        background-color: #ffe726;
+    
+    }
+    
+    #small-circle-4{
+        top: 320px;
+        left: 160px;
+        background-color: #12231d
+    }
+    
+    #middle-circle-1{
+        top: 30px;
+        left: 200px;
+    }
+    
+    #middle-circle-2{
+        top: 171px;
+        left: 20px;
+    }
+    
+    #middle-circle-3{
+        top: 30px;
+        left: 130px;
+        background-color: #0c5485;
+    }
+    
+    #middle-circle-4{
+        top: 400px;
+        left: 50px;
+    }
+    
+    #middle-circle-5{
+        top: 430px;
+        left: 240px;
+    }
+    
+    #middle-circle-6{
+        top: 390px;
+        left: 410px;
+    }
+    
+    #middle-circle-7{
+        top: 90px;
+        left: 410px;
+    }
+    
+    #middle-circle-8{
+        top: 240px;
+        left: 510px;
+        background-color: #ff6b08;
+    }
+    
+    #middle-circle-9{
+        top: 540px;
+        left: 200px;
+        background-color: #ffe726;
+    }
+    
+    #big-circle-1{
+        top: 180px;
+        left: 250px;
+        overflow: hidden;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
+    #big-circle-1:hover{
+        top: 180px;
+        left: 250px;
+        width: 240px;
+        height: 240px;
+    }
+    
+    .container-circles{
+        height: 720px;
+    }
+}/*media width-max:992*/
+
+@media screen and (max-width:768px){
+    .small-circle{
+        width: 50px;
+        height: 50px;
+    }
+
+    .middle-circle{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .big-circle{
+        width: 180px;
+        height: 180px;
+    }
+    
+    
+    .blue-mask{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: #0c5485;
+        opacity: 0.5;
+    }
+
+    #small-circle-1{
+        top: 480px;
+        left: 360px;
+        background-color: #12231d;
+    }
+    
+    #small-circle-2{
+        top: 50px;
+        left: 370px;
+        background-color: #ffe726;
+    
+    }
+    
+    #small-circle-3{
+        top: 350px;
+        left: 210px;
+        background-color: #ffe726;
+    
+    }
+    
+    #small-circle-4{
+        top: 290px;
+        left: 100px;
+        background-color: #12231d
+    }
+    
+    #middle-circle-1{
+        top: 30px;
+        left: 140px;
+    }
+    
+    #middle-circle-2{
+        top: 171px;
+        left: -40px;
+    }
+    
+    #middle-circle-3{
+        top: 50px;
+        left: 110px;
+        background-color: #0c5485;
+    }
+    
+    #middle-circle-4{
+        top: 360px;
+        left: -10px;
+    }
+    
+    #middle-circle-5{
+        top: 380px;
+        left: 160px;
+    }
+    
+    #middle-circle-6{
+        top: 360px;
+        left: 280px;
+    }
+    
+    #middle-circle-7{
+        top: 130px;
+        left: 280px;
+    }
+    
+    #middle-circle-8{
+        top: 245px;
+        left: 370px;
+        background-color: #ff6b08;
+    }
+    
+    #middle-circle-9{
+        top: 460px;
+        left: 160px;
+        background-color: #ffe726;
+    }
+    
+    #big-circle-1{
+        top: 140px;
+        left: 180px;
+        overflow: hidden;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
+    #big-circle-1:hover{
+        top: 140px;
+        left: 180px;
+        width: 180px;
+        height: 180px;
+    }
+    
+    .container-circles{
+        height: 720px;
+    }
+}
+
+@media screen and (max-width:576px){
     #small-circle-1{
         display: none;
     }
