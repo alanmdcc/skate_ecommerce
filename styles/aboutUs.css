@@ -1,3 +1,27 @@
+#gerardo-circle{
+
+}
+
+#julio-circle{
+
+}
+
+#david-circle{
+    background-image: url(../assets/about-us-pictures/david.jpg);
+}
+
+#manuel-circle{
+
+}
+
+#alan-circle{
+    background-image: url(../assets/about-us-pictures/alan.jpg);
+}
+
+#andres-circle{
+
+}
+
 #main{
     position: relative;
 }
@@ -57,7 +81,6 @@
     padding-right: 5px;   
 }
 
-/**************************/
 .move-container{
     animation-name: move;
     animation-duration: .5s;
@@ -66,12 +89,11 @@
 
 @keyframes move {
     100%{
-        top:180px;
-        left:150px;
+        top:190px;
+        left:250px;
     }
     
 }
-/**************************/
 
 /*Allow the focused container to not be covered by the black cover*/
 .container-focus{
@@ -83,13 +105,10 @@
     border-radius: 50%;
     width: 180px;
     height: 180px;
-    background-image: url(../assets/about-us-pictures/alan.jpg);
+    background-image: url(../assets/img/generation-mexico.png);
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
-}
-#circulo-david{
-    background-image: url(../assets/about-us-pictures/david.jpg);
 }
 
 /*Hover class for the picture*/
@@ -136,10 +155,6 @@
     
 }
 
-
-
-
-
 /*Class to hide the card before it is focused*/
 .hide{
 display: none;
@@ -167,13 +182,25 @@ display: none;
     border-radius: 13px;
 }
 
-.gris{
+.gray{
     -webkit-filter: grayscale(1); /* Webkit */
     filter: gray; /* IE6-9 */
     filter: grayscale(.9); /* W3C */
-    }
+}
 
-@media screen and (max-width:800px){
+
+@media screen and (max-width:1200px){
+
+    @keyframes move {
+        100%{
+            top:200px;
+            left:180px;
+        }
+        
+    }
+}
+
+@media screen and (max-width:992px){
     .container-profile{
         flex-direction: column;
         width:300px;
@@ -182,7 +209,88 @@ display: none;
         padding-bottom: 5px;  
         margin-bottom: 1rem;
     }
+   
+    .figure{
+        width: 140px;
+        height: 140px;
+    }
+
+    .change-size-decrease{
+        width: 230px;
+        height: 230px;
+    
+    }
+    
+    @keyframes decrease-size {
+        100%{
+            width: 140px;
+            height: 140px;
+        }
+        
+    }
+
+    @keyframes move {
+        100%{
+            top:30px;
+            left:190px;
+        }
+        
+    }
+}
+
+@media screen and (max-width:768px){
+   
+    .figure{
+        width: 100px;
+        height: 100px;
+    }
+
+    .change-size-decrease{
+        width: 230px;
+        height: 230px;
+    
+    }
+    
+    @keyframes decrease-size {
+        100%{
+            width: 100px;
+            height: 100px;
+        }
+        
+    }
+
+    @keyframes move {
+        100%{
+            top:30px;
+            left:140px;
+        }
+        
+    }
+}
+
+@media screen and (max-width:576px){
     .move-container{
         animation-name: move-not;
+    }
+    .hide{
+        display: inline;
+    }
+    .img-profile{
+        animation-name: no-increase-size;
+        width: 230px;
+        height: 230px;
+        margin-right: 30px;
+        margin-left: 30px;
+        box-shadow: 0 0 20px 1px #FAED26;
+    }
+
+    .container-profile{
+        background-color: #343a40;
+    }
+
+    .gray{
+        -webkit-filter: none; /* Webkit */
+        filter: none; /* IE6-9 */
+        filter: none; /* W3C */
     }
 }
