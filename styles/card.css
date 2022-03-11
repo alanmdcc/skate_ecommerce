@@ -1,0 +1,31 @@
+.card-style{
+    border: none !important;
+    width: 180px;
+}
+
+.card-style:hover{
+    width: 220px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.shop{
+    position: absolute;
+    bottom: 55px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #FAED26;
+    border-radius: 50%;
+}
+
+.shop-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url(../assets/icons/shoppingcart.svg);
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0;
+
+}

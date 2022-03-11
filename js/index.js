@@ -1,3 +1,36 @@
+//importar funciones del modulo card
+import {card, showProducts} from './modules/card.js';
+
+let html = '';
+let recommendedProducts = [
+
+  {
+    "name" : "Octo Purple", 
+    "img" : "../assets/img-products/longboard1.png",
+    "price" : 1500, 
+    "description" : "Patineta con ilustracion de pulpo"
+  },
+  {
+    "name" : "Octo Purple", 
+    "img" : "../assets/img-products/longboard2.png",
+    "price" : 1500, 
+    "description" : "Patineta con ilustracion de pulpo"
+  },
+  {
+    "name" : "Octo Purple", 
+    "img" : "../assets/img-products/longboard3.png",
+    "price" : 1500, 
+    "description" : "Patineta con ilustracion de pulpo"
+  }
+];
+
+showProducts(recommendedProducts, 'list-items', card());
+
+
+
+
+
+/*
 let price= document.querySelectorAll('.price');
 const carta= document.querySelectorAll('.card');
 let precios=[];
@@ -35,7 +68,9 @@ price.forEach(function(el){
 })
 
 //usar plantilla de card
-/*
+
+
+
 class item{
     name= "";
     img= "";
@@ -121,9 +156,9 @@ addItem({'img':patineta1.img,
 
 'img3':patineta3.img,
 'title3':patineta3.name,
-'price3':patineta3.price});
+'price3':patineta3.price});*/
 
-*/
+
 
 
 
