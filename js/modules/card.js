@@ -25,7 +25,7 @@ export function addItem(array, name, img, price, description){
 export function card(object = ""){
 
     let card =  `    
-    <div class="col-lg-3">
+    <div class="col-lg-3 carta col-md-4 col-sm-2">
         <div class="card card-style">
             <img src="${object.img}" class="card-img-top " alt="...">
             <div class="card-body p-1">
