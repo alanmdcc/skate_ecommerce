@@ -109,33 +109,61 @@
                     <img src="../assets/icons/user.svg" alt="logo" class="rounded mx-auto d-block mb-3" id="logo">
                     <h2 class="text-center font-weight-bold">QUEREMOS ESCUCHARTE</h2>
 
-                    <form action="mailto:contacto.skate@gmail.com?subject=Contacto%20Tienda" enctype="text/plain" method="POST" id="form-contact">
+                    <form action="mailto:contacto.skate@gmail.com?subject=Contacto%20Tienda" enctype="text/plain" method="POST" id="form-contact" class="form-contact">
+                        <!-- bloque para nombre -->
+                        <div class="form-group form--group" id="group--Name">
+                            <label for="Name" class="font-weight-bold form--label">Nombre</label>
+                            <div class="form--group-input">
+                              <input class="form-control form--input" type="text" name="Name" id="Name" placeholder="Tu Nombre">
+                              <i class="form--validation--estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="form--input--error">El nombre no puede contener menos de 3 letras.</p>
+                        </div class="form-group">
+                        
+                        <!-- bloque para email -->
+                        <div class="form-group form--group" id="group--email">
+                            <label for="email" class="font-weight-bold form--label">Email</label>
+                            <div class="form--group-input">
+                              <input class="form-control form--input" type="email" name="email" id="email"
+                              placeholder="correo@dominio.com">
+                              <i class="form--validation--estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="form--input--error">Correo invalido.</p>
+                        </div class="form-group">
 
-                        <div class="form-group">
-                            <label for="Name" class="font-weight-bold">Nombre</label>
-                            <input class="form-control" type="text" name="Name" id="Name" placeholder="Tu Nombre">
+                        <!-- bloque para telefono -->
+                        <div class="form-group form--group" id="group--Cellphone">
+                            <label for="Cellphone" class="font-weight-bold form--label">Teléfono</label>
+                            <div class="form--group-input">
+                              <input class="form-control form--input" type="number" name="Cellphone" id="Cellphone"
+                              placeholder="Tu número de Contacto">
+                              <i class="form--validation--estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="form--input--error">El número de teléfono no puede tener menos de 10 digitos.</p>
                         </div class="form-group">
-                        <div class="form-group">
-                            <label for="email" class="font-weight-bold">Email</label>
-                            <input class="form-control" type="email" name="email" id="email"
-                                placeholder="correo@dominio.com">
+
+                        <!-- bloque para mensaje -->
+                        <div class="form-group form--group" id="group--Msg">
+                            <label for="Msg" class="font-weight-bold form--label">Mensaje</label>
+                            <div class="form--group-input">
+                              <input class="form-control form--input" type="text" name="Msg" id="Msg" placeholder="Mensaje">
+                              <!-- <textarea class="form-control form--input" type="text" name="Msg" id="Msg" maxlength="200" size="10"
+                              placeholder="Mensaje" rows="5"></textarea> -->
+                              <i class="form--validation--estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="form--input--error">Tu mensaje debe tener mas de 20 caracteres.</p>
                         </div class="form-group">
-                        <div class="form-group">
-                            <label for="Cellphone" class="font-weight-bold">Teléfono</label>
-                            <input class="form-control" type="number" name="Cellphone" id="Cellphone"
-                                placeholder="Tu número de Contacto">
-                        </div class="form-group">
-                        <div class="form-group">
-                            <label for="Msg" class="font-weight-bold">Mensaje</label>
-                            <textarea class="form-control" type="text" name="Msg" id="Msg" maxlength="200" size="10"
-                                placeholder="Mensaje" rows="5"></textarea>
-                        </div class="form-group">
+
+                        <div class="form--mensaje" id="form--mensaje">
+                          <p><i class="fas fa-exclamation-triangle"></i> <b>Error: Por favor rellena todo el formulario</b></p>
+                        </div>
 
                         <div class="d-flex">
-                            <button class="btn btn-dark btn-block m-1 button-contact" type="submit">Enviar</button>
-                            <button class="btn btn-dark btn-block m-1 button-contact" type="reset">Borrar
-                                campos</button>
+                          <button class="btn btn-dark btn-block m-1 button-contact" type="submit">Enviar</button>
+                          <button class="btn btn-dark btn-block m-1 button-contact" type="reset">Borrar campos</button>
                         </div>
+                        <p class="form--mensaje-exito mt-3 text-center" id="form--mensaje-exito">Formulario Enviado Exitosamente</p>
+                        
 
                         <p class="mt-3 text-center">
                             ¿Tienes una cuenta? <a href="">Iniciar sesión</a>
@@ -147,6 +175,8 @@
     </main>
 
     <script src="../js/validation.js"></script>
+    <!-- iconos para validacion  -->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
