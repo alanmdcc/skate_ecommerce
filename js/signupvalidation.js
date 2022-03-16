@@ -13,42 +13,48 @@ const expresiones = {
 	name: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //resumida la linea que dejaron
 	telefono: /^\d{10,10}$/, // 7 a 14 numeros.
-    msg: /^[a-zA-ZÀ-ÿ\s]{20,200}$/, // Letras y espacios, pueden llevar acentos.
+    password: /^.{8,20}$/ // 8 a 20 digitos.
 }
 // creamos un objeto en donde se registra el estatus de cada campo
 const campos = {
     Name: false,
     email: false,
     Cellphone: false,
-    Msg: false
+    password: false
 }
 
 
-const validarFormulario = (e) => {
+const validarFormularioSignup = (e) => {
     switch(e.target.name){
         case "Name":            
-            validarCampo(expresiones.name, e.target, 'Name');
+            validarCampoSigup(expresiones.name, e.target, 'Name');
+            break;
+        case "Cellphone":
+            validarCampoSigup(expresiones.telefono, e.target, 'Cellphone');
             break;
         case "email":
-            validarCampo(expresiones.email, e.target, 'email');
+            validarCampoSigup(expresiones.email, e.target, 'email');
             // //funcion para validar un email, retorna true si es valido y false si no es valido
             // function validateEmail(email){
             //     const emailRegex = /^(([^<>()\[\]\\.,:\s@"]+(\.[^<>()\[\]\\.,:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             //     return emailRegex.test(email);
             // }
             break;
-        case "Cellphone":
-            validarCampo(expresiones.telefono, e.target, 'Cellphone');
+        
+        case "password":
+            validarCampoSigup(expresiones.password, e.target, 'password');
+            validarPassword2();
             break;
-        case "Msg":
-            validarCampo(expresiones.msg, e.target, 'Msg');
+        
+        case "password2":
+            validarPassword2();
             break;
         }
 }
 
 
 //funcion generica para validacion y cambio de clases 
-const validarCampo = (expresion, input, campo) => {
+const validarCampoSigup = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
 		document.getElementById(`group--${campo}`).classList.remove('form--group-incorrecto');
 		document.getElementById(`group--${campo}`).classList.add('form--group-correcto');
@@ -66,12 +72,32 @@ const validarCampo = (expresion, input, campo) => {
 	}
 }
 
+const validarPassword2 = () => {
+	const inputPassword1 = document.getElementById('password');
+	const inputPassword2 = document.getElementById('password2');
+
+	if(inputPassword1.value !== inputPassword2.value){
+		document.getElementById(`group--password2`).classList.add('form--group-incorrecto');
+		document.getElementById(`group--password2`).classList.remove('form--group-correcto');
+		document.querySelector(`#group--password2 i`).classList.add('fa-times-circle');
+		document.querySelector(`#group--password2 i`).classList.remove('fa-check-circle');
+		document.querySelector(`#group--password2 .form--input--error`).classList.add('form--input--error-activo');
+		campos['password'] = false;
+	} else {
+		document.getElementById(`group--password2`).classList.remove('form--group-incorrecto');
+		document.getElementById(`group--password2`).classList.add('form--group-correcto');
+		document.querySelector(`#group--password2 i`).classList.remove('fa-times-circle');
+		document.querySelector(`#group--password2 i`).classList.add('fa-check-circle');
+		document.querySelector(`#group--password2 .form--input--error`).classList.remove('form--input--error-activo');
+		campos['password'] = true;
+	}
+}
 
 //cuando key osea la tecla se levanta se ejecuta la funcion
 //blur es cambiar del input a otro lado de la pag se activa la funcion
 inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
+    input.addEventListener('keyup', validarFormularioSignup);
+    input.addEventListener('blur', validarFormularioSignup);
 })
 
 
@@ -79,8 +105,7 @@ inputs.forEach((input) => {
 // cuando se presiona el boton de enviar se ejecuta un prevent default
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
-	if(campos.Name && campos.email && campos.Cellphone && campos.Msg ){
-        formulario.submit();
+	if(campos.Name && campos.email && campos.Cellphone && campos.password){
 		formulario.reset();
 
 		document.getElementById('form--mensaje-exito').classList.add('form--mensaje-exito-activo');
@@ -114,23 +139,6 @@ formulario.addEventListener('submit', (e) => {
 
 
 
-
-// //agregamos el evento de escucha 'change', para saber su el valor del campo cambio
-
-// //https://developer.mozilla.org/es/docs/Web/API/HTMLElement/change_event
-
-// email.addEventListener('change', (e) => {
-
-//     let status = validateEmail(e.target.value);
-    
-//     if(status){
-//         console.log('correo valido');
-//         formIsValid.email = true;
-//     } else {
-//         alert('Correo invalido');
-//     }
-// });
-
 // //agrego funcion para validar numero de telefono
 
 // phone.addEventListener('change', (e)=>{
@@ -146,30 +154,8 @@ formulario.addEventListener('submit', (e) => {
     
 // }); 
 
-// //agrego funcion para validar nombre
 
-// person.addEventListener('change', (e) => {
-//     if(person.value.length > 35) {
-//         window.alert('El nombre no puede contener más de 35 caracteres.');
-//     } else if (person.value.length < 7){
-//     window.alert('El nombre debe contenr al menos un nombre y un apellido separados por un espacio.')
-//     } else{
-//         formIsValid.name = true;
-//     }
-// });
 
-// message.addEventListener('change', (e) => {
-//     if(e.target.value.length === 200){
-//         alert('Solo puedes usasr un maximo de 200 caracteres');
-//     } else if(e.target.value.length < 20){
-//         alert('Tu mensaje debe tener mas de 20 caracteres');
-//     }else{
-//         formIsValid.message = true;
-//     }
-// });
 
-// //evento para prevenir que se envien los datos sin validar
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     validateForm();
-// })
+
+
