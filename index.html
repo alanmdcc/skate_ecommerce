@@ -68,11 +68,21 @@
         </div>
 
         <a href="#" class="log-in">INICIAR SESION</a>
-        <a href="#" class="sing-in">REGISTRARSE</a>
+        <a href="./pages/signup.html" class="sing-in">REGISTRARSE</a>
 
         <div class="col-lg-2 col-md-2 col-sm-2 col-1 mt-3 p p-0 btn-section d-flex justify-content-end">
-          <button class="btn btn-icon m-1" id="user">
-            <img class="img-fluid" src="../assets/icons/user.svg" alt="">
+          <button class="btn btn-icon dropdown m-1" id="user">
+            <a href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-expanded="false">
+                  <img class="img-fluid" src="../assets/icons/user.svg" alt="">
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./pages/signup.html" target="_blank">Registro</a>
+              <a class="dropdown-item" href="./pages/longboard.html" target="_blank">Iniciar Sesion</a>
+              <a class="dropdown-item" href="./pages/add-new-procuct.html" target="_blank">Administrador</a>
+            </div>
+            
           </button>
           <!--/button User-->
 
