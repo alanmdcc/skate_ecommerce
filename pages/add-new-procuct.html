@@ -9,7 +9,6 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/add-new-product.css">
-    <link rel="stylesheet" href="../styles/contact.css">
 </head>
 <body>
 
@@ -109,7 +108,7 @@
   </header>
   <!--/header-->
   
-  <main id="contact-main" style="background-image: url(../assets/img-form-products/pexels-budgeron-bach-5157163.jpg);">
+  <main id="contact-main">
 
       <section class="container">
           <div class="row align-items-center justify-content-center">
@@ -118,7 +117,7 @@
 
                   <div class="card bg-contact">
 
-                    <img src="../assets/icons/user.svg" alt="logo" class="rounded mx-auto d-block mb-3" id="logo">
+                    <img src="../assets/logo/submarca.png" alt="logo" class="rounded mx-auto d-block mb-3" id="logo">
                     <h2 class="text-center font-weight-bold">NUEVO PRODUCTO</h2>
                       <div class="card-body">
                           
@@ -155,6 +154,14 @@
                                 <div class="d-flex justify-content-around">
                                   <button type="submit" class="btn btn-dark m-1 button-contact">AÑADIR PRODUCTO</button>
                                   <button type="reset" class="btn btn-dark m-1 button-contact">BORRAR CAMPOS</button><!--/submit-->
+                                </div>
+
+                                <div class="alert alert-success form--mensaje-exito mt-3" role="alert" id="alert-success">
+                                  ¡Producto añadido con éxito!
+                                </div>
+                                <div class="alert alert-danger form--mensaje mt-3" role="alert" id="alert-danger">
+                                  <i class="fas fa-exclamation-triangle"></i>
+                                  Favor de completar correctamente el formulario.
                                 </div>
               
                             </form><!--/form-->

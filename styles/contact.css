@@ -19,7 +19,7 @@
 }
 
 #logo{
-    width: 10%;
+    width: 50%;
 }
 
 .button-contact{
@@ -48,9 +48,24 @@
     height: 228px;
 }
 
+.form--mensaje-exito{
+    display: none;
+}
+
+.form--mensaje-exito-activo{
+    display: block;
+}
+
+.form--mensaje{
+    display: none;
+}
+
+.form--mensaje-activo{
+    display: block;
+}
 
 /* estilos para bloques de contacto */
-
+/* 
 .form--group-input{
     position: relative;
 }
@@ -116,11 +131,11 @@
 
 .form--mensaje-exito-activo{
     display: block;
-}
+} */
 
 /* Estilos para validacion */
 
-.form--group-correcto .form--validation--estado{
+/* .form--group-correcto .form--validation--estado{
     color: #1ed12d;
     opacity: 1;
 }
@@ -136,4 +151,4 @@
 
 .form--group-incorrecto .form--input{
     border: 3px solid #bb2929;
-}
+} */
