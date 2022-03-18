@@ -13,103 +13,8 @@
 </head>
 
 <body>
-  <header>
-    <div class="container-fluid">
-      <nav class="row navbar navbar-expand-lg navbar-expand-md navbar-config shadow-sm">
-
-        <div class="col-lg-3 col-md-3 col-2 p">
-          <a class="navbar-brand" href="../index.html">
-            <img src="../assets/icons/logo.svg" class="align-top logo" alt="">
-          </a>
-          <!--/logo-->
-        </div>
-
-        <div class="col-lg-7 col-md-7 mt-3">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto navbar-menu col-10">
-              <li class="nav-item">
-                <a class="nav-link menu-item" href="../index.html">INICIO<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link menu-item" href="./about_us.html">NOSOTROS</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link menu-item dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-expanded="false">
-                  PRODUCTOS
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="./penny.html" target="_blank">Pennyboards</a>
-                  <a class="dropdown-item" href="./longboard.html" target="_blank">Longboards</a>
-                  <a class="dropdown-item" href="./skates.html" target="_blank">Skates</a>
-                </div>
-              </li>
-              <!--/dropdown-->
-
-              <li class="nav-item">
-                <a class="nav-link menu-item" href="./contact.html">CONTACTO<span class="sr-only">(current)</span></a>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-        <!--/Menu-->
-
-        <div class="col-lg-6 col-md-6 d-lg-none d-md-none col-10 p search-form">
-          <form class="form-inline my-2 my-lg-0" id="search">
-            <input class="form-control search-input" type="search" placeholder="Buscar..." aria-label="Search">
-            <!--/input Search-->
-            <button class="btn btn-search" type="submit">
-              <img src="../assets/icons/search.svg" alt="">
-            </button>
-            <!--/button search-->
-          </form>
-        </div>
-
-        <a href="#" class="log-in">INICIAR SESION</a>
-        <a href="./signup.html" class="sing-in">REGISTRARSE</a>
-
-        <div class="col-lg-2 col-md-2 col-sm-2 col-1 mt-3 p p-0 btn-section d-flex justify-content-end">
-          <button class="btn btn-icon dropdown m-1" id="user">
-            <a href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-expanded="false">
-                  <img class="img-fluid" src="../assets/icons/user.svg" alt="">
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="./signup.html" target="_blank">Registro</a>
-              <a class="dropdown-item" href="#" target="_blank">Iniciar Sesion</a>
-              <a class="dropdown-item" href="./add-new-procuct.html" target="_blank">Administrador</a>
-            </div>
-            
-          </button>
-          <!--/button User-->
-
-          <button class="btn btn-icon m-1" id="cart">
-            <img class="img-fluid" src="../assets/icons/shoppingcart.svg" alt="">
-          </button>
-          <!--/button Cart-->
-        </div>
-
-        <button class="navbar-toggler btn-menu" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">
-            <img class="img-fluid" src="../assets/icons/menu.svg" alt="">
-          </span>
-        </button>
-
-      </nav>
-      <!--/navbar-->
-    </div>
-
-    <div class="navbar-polygon-shape shadow-sm"></div>
-    <!--polygon shape-->
-
-  </header>
-  <!--/header-->
-
-
+  <header id="navbar-wrapper"></header><!--/header-->
+  
     <main id="contact-main" class="d-flex justify-content-center">
 
         <div class="container mt-5">
@@ -171,6 +76,7 @@
         </div><!-- container -->
     </main>
 
+    <script src="../js/navbar.js"></script><!---navbar-->
     <script src="../js/validation.js"></script>
     <!-- iconos para validacion  -->
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
