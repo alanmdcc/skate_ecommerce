@@ -1,0 +1,35 @@
+img.red-social {
+    margin: 1rem;
+    max-width: 5vw;
+    min-width: 25px;
+}
+
+footer.footer {
+    background-color: #343a40;
+    color: white;
+    min-width: 500px;
+}
+
+div.footer-line {
+    border-top: 1px solid;
+    color: white;
+}
+
+strong.text-en-negritas {
+    margin-bottom: 30%;
+}
+
+div.footer-acerca-de-nosotros,
+div.footer-atencion-a-clientes {
+    font-size: .9rem;
+    margin: 0 2%;
+    padding-top: 3%;
+}
+
+div.footer-copyright-message {
+    display: flex;
+    font-size: 0.7rem;
+    justify-content: center;
+    padding: 3% 0;
+    text-align: center;
+}
