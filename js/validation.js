@@ -1,6 +1,6 @@
 // Validacion formulario
 const formulario = document.getElementById('form-contact'); //accedemos al bloque del formulario
-const inputs = document.querySelectorAll('#form-contact input'); // obtenemos todos los inputs de la pag
+const inputs = document.querySelectorAll('input'); // obtenemos todos los inputs de la pag
 //////////////////////////////////////////////////
 // //Elemntos del dom
 // const form = document.getElementById('form-contact');
@@ -26,7 +26,7 @@ const campos = {
 
 const validarFormulario = (e) => {
     switch(e.target.name){
-        case "Name":            
+        case "Name":           
             validarCampo(expresiones.name, e.target, 'Name');
             break;
         case "email":
@@ -50,18 +50,12 @@ const validarFormulario = (e) => {
 //funcion generica para validacion y cambio de clases 
 const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
-		document.getElementById(`group--${campo}`).classList.remove('form--group-incorrecto');
-		document.getElementById(`group--${campo}`).classList.add('form--group-correcto');
-		document.querySelector(`#group--${campo} i`).classList.add('fa-check-circle');
-		document.querySelector(`#group--${campo} i`).classList.remove('fa-times-circle');
-		document.querySelector(`#group--${campo} .form--input--error`).classList.remove('form--input--error-activo');
+		document.getElementById(`${campo}`).classList.remove('is-invalid');
+		document.getElementById(`${campo}`).classList.add('is-valid');
 		campos[campo] = true;
 	} else {
-		document.getElementById(`group--${campo}`).classList.add('form--group-incorrecto');
-		document.getElementById(`group--${campo}`).classList.remove('form--group-correcto');
-		document.querySelector(`#group--${campo} i`).classList.add('fa-times-circle');
-		document.querySelector(`#group--${campo} i`).classList.remove('fa-check-circle');
-		document.querySelector(`#group--${campo} .form--input--error`).classList.add('form--input--error-activo');
+		document.getElementById(`${campo}`).classList.add('is-invalid');
+		document.getElementById(`${campo}`).classList.remove('is-valid');
 		campos[campo] = false;
 	}
 }
@@ -83,16 +77,19 @@ formulario.addEventListener('submit', (e) => {
         formulario.submit();
 		formulario.reset();
 
-		document.getElementById('form--mensaje-exito').classList.add('form--mensaje-exito-activo');
+		document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');
 		setTimeout(() => {
-			document.getElementById('form--mensaje-exito').classList.remove('form--mensaje-exito-activo');
+			document.getElementById('alert-success').classList.remove('form--mensaje-exito-activo');
 		}, 5000);
 
-		document.querySelectorAll('.form--group-correcto').forEach((icono) => {
-			icono.classList.remove('form--group-correcto');
+		document.querySelectorAll('.is-valid').forEach((icono) => {
+			icono.classList.remove('is-valid');
 		});
 	} else {
-		document.getElementById('form--mensaje').classList.add('form--mensaje-exito-activo');
+		document.getElementById('alert-danger').classList.add('form--mensaje-activo');
+		setTimeout(() => {
+			document.getElementById('alert-danger').classList.remove('form--mensaje-activo');
+		}, 5000);
 	}
 })
 //////////////////////////////////////////////////////////
