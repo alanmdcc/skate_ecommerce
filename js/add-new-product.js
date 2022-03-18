@@ -31,6 +31,24 @@ function validateForm(){
         console.log("Producto creado con éxito");
         console.log(productos);
         resetForm();
+
+        document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');
+		setTimeout(() => {
+			document.getElementById('alert-success').classList.remove('form--mensaje-exito-activo');
+		}, 5000);
+
+		document.querySelectorAll('.is-valid').forEach((icono) => {
+			icono.classList.remove('is-valid');
+		});
+
+		Object.keys(formIsValid).forEach(campo => {
+			formIsValid[campo] = false;
+		})
+    }else{
+        document.getElementById('alert-danger').classList.add('form--mensaje-activo');
+		setTimeout(() => {
+			document.getElementById('alert-danger').classList.remove('form--mensaje-activo');
+		}, 5000);
     }
 }
 
