@@ -1,19 +1,42 @@
+import {user, addUser} from './modules/user.js';
+
 // Validacion formulario
 const formulario = document.getElementById('form-contact'); //accedemos al bloque del formulario
 const inputs = document.querySelectorAll('input'); // obtenemos todos los inputs de la pag
-
+const username= document.getElementById('Name');
+const useremail= document.getElementById('email');
+const userphone= document.getElementById('Cellphone');
+const userpass= document.getElementById('password');
 const expresiones = {
 	name: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //resumida la linea que dejaron
 	telefono: /^\d{10,10}$/, // 7 a 14 numeros.
     password: /^.{8,20}$/ // 8 a 20 digitos.
 }
+
+
+let usuarios = [];
 // creamos un objeto en donde se registra el estatus de cada campo
 const campos = {
     Name: false,
     email: false,
     Cellphone: false,
     password: false
+}
+
+
+// agregar objeto usuario en formato JSON
+function validateForm(){
+    const formValues = Object.values(campos); //regresa un arreglo con todos los valores de un objeto.
+    
+    //Vamos a buscar dentro del arreglo formValuer 
+    const valid = formValues.findIndex((value) => value == false);
+    if(valid === -1){
+        addUser(usuarios,username.value,useremail.value,userphone.value,userpass.value);
+        console.log("Usuario registrado");
+        console.log(usuarios);
+        resetForm();
+    }
 }
 
 const validarFormularioSignup = (e) => {
@@ -101,5 +124,11 @@ formulario.addEventListener('submit', (e) => {
 			document.getElementById('alert-danger').classList.remove('form--mensaje-activo');
 		}, 5000);
 	}
+})
+
+//Detiene el evento submit y evalua si el formulario es válido
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    validateForm();
 })
 
