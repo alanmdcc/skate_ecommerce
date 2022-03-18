@@ -4,9 +4,7 @@
 }
 
 .card-style:hover{
-    width: 220px;
     cursor: pointer;
-    z-index: 1000;
 }
 
 .shop{
@@ -23,9 +21,34 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-image: url(../assets/icons/shoppingcart.svg);
     object-fit: cover;
-    overflow: hidden;
     margin: 0;
+    position:relative;
 
+}
+
+.img-product{
+    transition: transform .2s;
+}
+
+.img-product:hover{
+    transform: scale(1.1);
+}
+
+.img-cart{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 30px;
+    width: 30px;
+    transition: transform .2s;
+}
+
+.img-cart:hover{
+    transform: scale(1.1);
+}
+
+.product-price{
+    font-size: 2rem;
+    font-weight: bold;
 }

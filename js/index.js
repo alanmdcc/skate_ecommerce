@@ -11,20 +11,20 @@ let recommendedProducts = [
     "description" : "Patineta con ilustracion de pulpo"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Alien Invasion", 
     "img" : "../assets/img-products/longboard2.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1350, 
+    "description" : "Patineta con ilustracion de aliens"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Dark Nightmare", 
     "img" : "../assets/img-products/longboard3.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1100, 
+    "description" : "Patineta con ilustracion de una pesadilla"
   }
 ];
 
-showProducts(recommendedProducts, 'list-items', card());
+showProducts(recommendedProducts, 'list-items');
 
 
 

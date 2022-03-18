@@ -11,59 +11,59 @@ let recommendedProducts = [
     "description" : "Patineta con ilustracion de pulpo"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Alien Invasion", 
     "img" : "../assets/img-products/longboard2.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1350, 
+    "description" : "Patineta con ilustracion de aliens"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Dark Nightmare", 
     "img" : "../assets/img-products/longboard3.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1100, 
+    "description" : "Patineta con ilustracion de una pesadilla"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Octo Skull", 
     "img" : "../assets/img-products/longboard4.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 950, 
+    "description" : "Patineta con ilustracion de pulpo y calavera"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Riding Monster", 
     "img" : "../assets/img-products/longboard5.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1120, 
+    "description" : "Patineta con ilustracion de hombre sobre monstruo"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Dark Samurai", 
     "img" : "../assets/img-products/longboard6.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1900, 
+    "description" : "Patineta con ilustracion de samurai y dragón"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Dino Nightmare", 
     "img" : "../assets/img-products/longboard7.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1750, 
+    "description" : "Patineta con ilustracion de dinosaurios"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Figures", 
     "img" : "../assets/img-products/longboard8.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1660, 
+    "description" : "Patineta con ilustracion de figuras"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Foreign Planet", 
     "img" : "../assets/img-products/longboard9.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1470, 
+    "description" : "Patineta con ilustracion de astronauta en otro planeta"
   },
   {
-    "name" : "Octo Purple", 
+    "name" : "Evil Wolf", 
     "img" : "../assets/img-products/longboard10.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
+    "price" : 1200, 
+    "description" : "Patineta con ilustracion de lobo"
   }
 ];
 
-showProducts(recommendedProducts, 'list-items', card());
+showProducts(recommendedProducts, 'list-items');
