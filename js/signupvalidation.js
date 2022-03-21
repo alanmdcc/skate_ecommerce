@@ -24,21 +24,6 @@ const campos = {
     password: false
 }
 
-
-// agregar objeto usuario en formato JSON
-function validateForm(){
-    const formValues = Object.values(campos); //regresa un arreglo con todos los valores de un objeto.
-    
-    //Vamos a buscar dentro del arreglo formValuer 
-    const valid = formValues.findIndex((value) => value == false);
-    if(valid === -1){
-        addUser(usuarios,username.value,useremail.value,userphone.value,userpass.value);
-        console.log("Usuario registrado");
-        console.log(usuarios);
-        resetForm();
-    }
-}
-
 const validarFormularioSignup = (e) => {
     switch(e.target.name){
         case "Name":            
@@ -103,6 +88,9 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
 	if(campos.Name && campos.email && campos.Cellphone && campos.password){
+	//se crea un objeto json del usuario y se añade a un array
+		addUser(usuarios,username.value,userphone.value,userpass.value,useremail.value);
+        console.log(usuarios);
 		formulario.reset();
 
 		document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');
@@ -126,9 +114,4 @@ formulario.addEventListener('submit', (e) => {
 	}
 })
 
-//Detiene el evento submit y evalua si el formulario es válido
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-    validateForm();
-})
 
