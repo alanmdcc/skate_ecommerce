@@ -29,14 +29,14 @@
                         <div class="form-group form--group" id="group--Name">
                           <label for="Name" class="font-weight-bold form--label">Nombre</label>
                           <input class="form-control form--input" type="text" name="Name" id="Name" placeholder="Tu nombre">
-                          <p class="invalid-feedback">El nombre no puede contener menos de 3 letras.</p>
+                          <p class="invalid-feedback">El nombre no puede contener menos de 3 letras, caracteres especiales o números.</p>
                         </div class="form-group">
 
                         <!-- bloque para telefono -->
                         <div class="form-group form--group" id="group--Cellphone">
                           <label for="Cellphone" class="font-weight-bold form--label">Teléfono</label>
                           <input class="form-control form--input" type="number" name="Cellphone" id="Cellphone" placeholder="Tu número de contacto">
-                          <p class="invalid-feedback">El número de teléfono no puede tener menos de 10 digitos.</p>
+                          <p class="invalid-feedback">El número de teléfono no puede tener mas de 10 digitos.</p>
                         </div class="form-group">
                         
                         <!-- bloque para email -->
@@ -87,14 +87,10 @@
         </div><!-- container -->
     </main>
 
-    <script src="../js/navbar.js"></script><!---navbar-->
-     <!-- footer -->
     <footer id="footer" class="container-fluid footer">
       
     </footer>
 
-    <script src="../js/signupvalidation.js"></script>
-    <!-- iconos para validacion  -->
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -103,7 +99,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
     </script>
-    <script src="../js/footer.js"></script>
+    <script src="../js/navbar.js"></script><!---navbar-->
+    <script src="../js/footer.js"></script><!-- footer -->
+    <script type="module" src="../js/signupvalidation.js"></script><!-- iconos para validacion  -->
 </body>
 
 </html>

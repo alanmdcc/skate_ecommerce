@@ -1,4 +1,4 @@
-import {user, addUser} from './modules/user.js';
+import { user, addUser } from './modules/user.js';
 
 // Validacion formulario
 const formulario = document.getElementById('form-contact'); //accedemos al bloque del formulario
@@ -7,6 +7,7 @@ const username= document.getElementById('Name');
 const useremail= document.getElementById('email');
 const userphone= document.getElementById('Cellphone');
 const userpass= document.getElementById('password');
+
 const expresiones = {
     name: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //resumida la linea que dejaron
@@ -14,7 +15,6 @@ const expresiones = {
     password: /^.{8,20}$/ // 8 a 20 digitos.
 }
 
-let usuarios = [];
 // creamos un objeto en donde se registra el estatus de cada campo
 const campos = {
     Name: false,
@@ -22,6 +22,9 @@ const campos = {
     Cellphone: false,
     password: false
 }
+
+let usuarios = [];
+
 
 const validarFormularioSignup = (e) => {
     switch(e.target.name){
@@ -64,7 +67,7 @@ const validarPassword2 = () => {
     const inputPassword1 = document.getElementById('password');
     const inputPassword2 = document.getElementById('password2');
 
-    if(inputPassword1.value !== inputPassword2.value){
+    if(inputPassword1.value !== inputPassword2.value || inputPassword1.value === '' || inputPassword2.value === ''){
         document.getElementById('password2').classList.add("is-invalid");
         document.getElementById('password2').classList.remove("is-valid");
         campos['password'] = false;
@@ -82,9 +85,11 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validarFormularioSignup);
 })
 
+
 // cuando se presiona el boton de enviar se ejecuta un prevent default
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
+
     if(campos.Name && campos.email && campos.Cellphone && campos.password){
     //se crea un objeto json del usuario y se añade a un array
         addUser(usuarios,username.value,userphone.value,userpass.value,useremail.value);
@@ -110,5 +115,6 @@ formulario.addEventListener('submit', (e) => {
             document.getElementById('alert-danger').classList.remove('form--mensaje-activo');
         }, 5000);
     }
-})
+
+});
 
