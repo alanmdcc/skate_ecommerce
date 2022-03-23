@@ -23,12 +23,9 @@ const campos = {
     password: false
 }
 
-<<<<<<< HEAD
-=======
 let usuarios = [];
 
 
->>>>>>> 8e4a81743c03079b7840092ffee8a04754c9c077
 const validarFormularioSignup = (e) => {
     switch(e.target.name){
         case "Name":            
@@ -92,14 +89,6 @@ inputs.forEach((input) => {
 // cuando se presiona el boton de enviar se ejecuta un prevent default
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
-<<<<<<< HEAD
-	if(campos.Name && campos.email && campos.Cellphone && campos.password){
-	//se crea un objeto json del usuario y se añade a un array
-		addUser(usuarios,username.value,userphone.value,userpass.value,useremail.value);
-        console.log(usuarios);
-		formulario.reset();
-=======
->>>>>>> 8e4a81743c03079b7840092ffee8a04754c9c077
 
     if(campos.Name && campos.email && campos.Cellphone && campos.password){
     //se crea un objeto json del usuario y se añade a un array
@@ -120,8 +109,6 @@ formulario.addEventListener('submit', (e) => {
             campos[campo] = false;
         })
 
-<<<<<<< HEAD
-=======
     } else {
         document.getElementById('alert-danger').classList.add('form--mensaje-activo');
         setTimeout(() => {
@@ -130,5 +117,4 @@ formulario.addEventListener('submit', (e) => {
     }
 
 });
->>>>>>> 8e4a81743c03079b7840092ffee8a04754c9c077
 
