@@ -1,18 +1,7 @@
 // Validacion formulario
 const formulario = document.getElementById('form-contact'); //accedemos al bloque del formulario
 const inputs = document.querySelectorAll('input'); // obtenemos todos los inputs de la pag
-<<<<<<< HEAD
-//////////////////////////////////////////////////
-// //Elemntos del dom
-// const form = document.getElementById('form-contact');
-// const email = document.getElementById('email');
-// const phone= document.getElementById('Cellphone');
-// const person = document.getElementById('Name');
-// const message = document.getElementById('Msg');
-///////////////////////////////////////////////////
-=======
 
->>>>>>> 145f34066e63919d19d0dd086ff9385f93ecd5cc
 const expresiones = {
 	name: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //resumida la linea que dejaron
@@ -30,7 +19,7 @@ const campos = {
 
 const validarFormulario = (e) => {
     switch(e.target.name){
-        case "Name":           
+        case "Name":            
             validarCampo(expresiones.name, e.target, 'Name');
             break;
         case "email":
@@ -49,21 +38,12 @@ const validarFormulario = (e) => {
 //funcion generica para validacion y cambio de clases 
 const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
-<<<<<<< HEAD
-		document.getElementById(`${campo}`).classList.remove('is-invalid');
-		document.getElementById(`${campo}`).classList.add('is-valid');
-		campos[campo] = true;
-	} else {
-		document.getElementById(`${campo}`).classList.add('is-invalid');
-		document.getElementById(`${campo}`).classList.remove('is-valid');
-=======
 		document.getElementById(`${campo}`).classList.remove("is-invalid");
 		document.getElementById(`${campo}`).classList.add("is-valid");
 		campos[campo] = true;
 	} else {
 		document.getElementById(`${campo}`).classList.add("is-invalid");
 		document.getElementById(`${campo}`).classList.remove("is-valid");
->>>>>>> 145f34066e63919d19d0dd086ff9385f93ecd5cc
 		campos[campo] = false;
 	}
 }

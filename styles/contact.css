@@ -70,7 +70,6 @@
 .form--group-input{
     position: relative;
 }
-
 .form--input{
     width: 100%;
     background: #fff;
@@ -81,23 +80,19 @@
     padding: 0 40px 0 10px;
     transition: .3s ease all;
 }
-
 .form--input:focus{
     border: 3px solid #0075FF;
     outline: none;
     box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
-
 .form--input--error{
     font-size: 12px;
     margin-bottom: 0;
     display: none;
 }
-
 .form--input--error-activo{
     display: block;
 }
-
 .form--validation--estado{
     position: absolute;
     right: 10px;
@@ -106,7 +101,6 @@
     font-size: 16px;
     opacity: 0;
 }
-
 .form--mensaje{
     height: 45px;
     line-height: 45px;
@@ -115,21 +109,17 @@
     border-radius: 3px;
     display: none;
 }
-
 .form--mensaje-activo{
     display: block;
 }
-
 .form--mensaje p{
     margin: 0;
 }
-
 .form--mensaje-exito{
     font-size: 14px;
     color: #119200;
     display: none;
 }
-
 .form--mensaje-exito-activo{
     display: block;
 } */
@@ -139,22 +129,18 @@
 /*
 .form--group-correcto .form--validation--estado{
 =======
-
 /* .form--group-correcto .form--validation--estado{
 >>>>>>> 145f34066e63919d19d0dd086ff9385f93ecd5cc
     color: #1ed12d;
     opacity: 1;
 }
-
 .form--group-incorrecto .form--label{
     color: #bb2929;
 }
-
 .form--group-incorrecto .form--validation--estado{
     color: #bb2929;
     opacity: 1;
 }
-
 .form--group-incorrecto .form--input{
     border: 3px solid #bb2929;
 } */
