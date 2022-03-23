@@ -74,15 +74,38 @@ h2 {
     padding: 0 15px;
   }
 
+  .texto-img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 61px;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.position{
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
   @media (max-width: 1024px) {
     .card {
       width: 33.3%;
     }
+    .texto-img{
+      font-size: large;
+     }
   }
   
   @media (max-width: 768px) {
      .card {
       width: 50%;
+    }
+    .texto-img{
+     font-size: large;
     }
   }
   
@@ -93,6 +116,9 @@ h2 {
       display: inline;
       
     }
+    .texto-img{
+      font-size:large;
+     }
     
   }
 
