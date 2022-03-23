@@ -22,17 +22,17 @@ export function addItem(array, name, img, price, description){
 }
 
 //Crea una tarjeta dinamica solo de presentacion, con la imagen de muestra
-export function card(object = ""){
+export function card(object){
 
     let card =  `    
-    <div class="col-lg-3 carta col-md-4 col-sm-2">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center">
         <div class="card card-style">
-            <img src="${object.img}" class="card-img-top " alt="...">
+            <img src="${object.img}" class="card-img-top img-product" alt="producto">
             <div class="card-body p-1">
                 <div class="shop text-center">
-                    <div class="shop-icon"></div>
+                    <a href="#"><img src="../assets/icons/shoppingcart.svg" class="img-cart" alt="cart"></a>
                 </div>
-                <p class="card-text h1 text-center">$990</p>
+                <p class="card-text text-center product-price">$${object.price.toLocaleString()}</p>
             </div>
         </div>
     </div>

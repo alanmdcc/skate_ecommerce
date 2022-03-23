@@ -1,3 +1,48 @@
+#contact-main{
+    background-image: url(../assets/img-form-products/pexels-budgeron-bach-5157163.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.bg-contact{
+    background-color: red;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+}
+
+.container{
+    z-index:2;
+}
+
+#logo{
+    width: 50%;
+}
+
+.button-contact{
+    font-weight: bold;
+}
+
+.button-contact:hover{
+    color:#FAED26;
+    
+}
+
+.form-control:focus{
+    border-color: #FAED26;
+    box-shadow: 0 0 10px #FAED26;
+}
+
+@media screen and (max-width:900px){
+    #contact-main{
+        background-image: url(../assets/img-bg-contact/bg-contact-sm.PNG);
+    }
+    
+}
+
 .file-input{
     position: relative;
     display: block;
@@ -34,4 +79,21 @@ input[type="file"] {
     width: 100%;
     height: 32px;
     display:block;
+}
+
+
+.form--mensaje-exito{
+    display: none;
+}
+
+.form--mensaje-exito-activo{
+    display: block;
+}
+
+.form--mensaje{
+    display: none;
+}
+
+.form--mensaje-activo{
+    display: block;
 }

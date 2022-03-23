@@ -66,28 +66,28 @@ for(let ctn of containerProfile){
         if (width.matches){}else{
             let container = e.target; //Get the container
             let img = container.getElementsByClassName("img-profile")[0]; //Get the image from the container
-
             const ifButton = e.target.getElementsByClassName("card-body")[0].contains(e.relatedTarget); //Validate if the new focused element is inside the text container
             const ifImg = e.relatedTarget === img; //Validate if the new focused element is the image
             if(ifImg){ //If the image is clicked again the flag is not removed so the changeToFocus won't be triggered
                 changeToBlur(container); //Return the page to a blur state
             }else if(!ifButton){ //If the element focused is outside the container the page will return to blur state
                 changeToBlur(container);//Return the page to a blur state
-                img.classList.remove("flag"); //Remove the falg so the changeToFocus can be triggered with the image
+                img.classList.remove("flag"); //Remove the flag so the changeToFocus can be triggered with the image
             }else{
-                container.focus(); //Keep the focus in the container if an element inside of it is focused
-            };
+            }
         }
-    })
+    });
 }; //for(let ctn of containerProfile)
 
-/* //Aply a click event to all the buttons to return the page to a blur state
+//Aply a click event to all the buttons to return the page to a blur state
 for(let btn of buttonProfile){
     btn.addEventListener("click",function(e){
-        let container = e.target.parentNode.parentNode.parentNode; //Get the container element
-        changeToBlur(container) //Return the page to a blur state
+        let container = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode; //Get the container element
+        let img = container.getElementsByClassName("img-profile")[0]; //Get the image inside container
+        changeToBlur(container);//Change to blur state
+        img.classList.remove("flag"); //Remove the flag so the changeToFocus can be triggered with the image
     })
-};// for(let btn of buttonProfile) */
+};// for(let btn of buttonProfile)
 
 
 

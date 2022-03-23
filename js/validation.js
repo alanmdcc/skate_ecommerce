@@ -1,6 +1,7 @@
 // Validacion formulario
 const formulario = document.getElementById('form-contact'); //accedemos al bloque del formulario
 const inputs = document.querySelectorAll('input'); // obtenemos todos los inputs de la pag
+<<<<<<< HEAD
 //////////////////////////////////////////////////
 // //Elemntos del dom
 // const form = document.getElementById('form-contact');
@@ -9,11 +10,14 @@ const inputs = document.querySelectorAll('input'); // obtenemos todos los inputs
 // const person = document.getElementById('Name');
 // const message = document.getElementById('Msg');
 ///////////////////////////////////////////////////
+=======
+
+>>>>>>> 145f34066e63919d19d0dd086ff9385f93ecd5cc
 const expresiones = {
 	name: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //resumida la linea que dejaron
 	telefono: /^\d{10,10}$/, // 7 a 14 numeros.
-    msg: /^[a-zA-ZÀ-ÿ\s]{20,200}$/, // Letras y espacios, pueden llevar acentos.
+    msg: /^[a-zA-ZÀ-ÿ\s]{10,200}$/, // Letras y espacios, pueden llevar acentos.
 }
 // creamos un objeto en donde se registra el estatus de cada campo
 const campos = {
@@ -31,11 +35,6 @@ const validarFormulario = (e) => {
             break;
         case "email":
             validarCampo(expresiones.email, e.target, 'email');
-            // //funcion para validar un email, retorna true si es valido y false si no es valido
-            // function validateEmail(email){
-            //     const emailRegex = /^(([^<>()\[\]\\.,:\s@"]+(\.[^<>()\[\]\\.,:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            //     return emailRegex.test(email);
-            // }
             break;
         case "Cellphone":
             validarCampo(expresiones.telefono, e.target, 'Cellphone');
@@ -50,12 +49,21 @@ const validarFormulario = (e) => {
 //funcion generica para validacion y cambio de clases 
 const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
+<<<<<<< HEAD
 		document.getElementById(`${campo}`).classList.remove('is-invalid');
 		document.getElementById(`${campo}`).classList.add('is-valid');
 		campos[campo] = true;
 	} else {
 		document.getElementById(`${campo}`).classList.add('is-invalid');
 		document.getElementById(`${campo}`).classList.remove('is-valid');
+=======
+		document.getElementById(`${campo}`).classList.remove("is-invalid");
+		document.getElementById(`${campo}`).classList.add("is-valid");
+		campos[campo] = true;
+	} else {
+		document.getElementById(`${campo}`).classList.add("is-invalid");
+		document.getElementById(`${campo}`).classList.remove("is-valid");
+>>>>>>> 145f34066e63919d19d0dd086ff9385f93ecd5cc
 		campos[campo] = false;
 	}
 }
@@ -85,6 +93,11 @@ formulario.addEventListener('submit', (e) => {
 		document.querySelectorAll('.is-valid').forEach((icono) => {
 			icono.classList.remove('is-valid');
 		});
+
+		Object.keys(campos).forEach(campo => {
+			campos[campo] = false;
+		})
+
 	} else {
 		document.getElementById('alert-danger').classList.add('form--mensaje-activo');
 		setTimeout(() => {
@@ -92,81 +105,3 @@ formulario.addEventListener('submit', (e) => {
 		}, 5000);
 	}
 })
-//////////////////////////////////////////////////////////
-// //funcion para validar que todos los datotos introducidos en el formulario sea correctos
-// function validateForm(){
-//     const formValues = Object.values(formIsValid); //regresa un arreglo con todos los valores de un objeto.
-    
-//     console.log(formIsValid);
-//     //Vamos a buscar dentro del arreglo formValuer 
-//     const valid = formValues.findIndex((value) => value == false);
-
-//     if(valid === -1){
-//         form.submit(); //abre la aplicación de default de correo con la información del formulario
-//     } else{
-//         alert('El formulario es invalido');
-//     }
-// }
-//////////////////////////////////////////////////////////////
-
-
-
-
-// //agregamos el evento de escucha 'change', para saber su el valor del campo cambio
-
-// //https://developer.mozilla.org/es/docs/Web/API/HTMLElement/change_event
-
-// email.addEventListener('change', (e) => {
-
-//     let status = validateEmail(e.target.value);
-    
-//     if(status){
-//         console.log('correo valido');
-//         formIsValid.email = true;
-//     } else {
-//         alert('Correo invalido');
-//     }
-// });
-
-// //agrego funcion para validar numero de telefono
-
-// phone.addEventListener('change', (e)=>{
-//     if (phone.value.length>10){
-//         window.alert('el número de teléfono no puede tener más de 10 digitos');
-//     }else if (phone.value.length<=0 || phone.value.length !=10){
-//         window.alert('por favor ingrese un número de teléfono válido');
-//     } else if (isNaN(phone.value)==true){
-//         window.alert('no se pueden ingresar letras en el numero de telefono');
-//     } else{
-//         formIsValid.phone = true;
-//     }
-    
-// }); 
-
-// //agrego funcion para validar nombre
-
-// person.addEventListener('change', (e) => {
-//     if(person.value.length > 35) {
-//         window.alert('El nombre no puede contener más de 35 caracteres.');
-//     } else if (person.value.length < 7){
-//     window.alert('El nombre debe contenr al menos un nombre y un apellido separados por un espacio.')
-//     } else{
-//         formIsValid.name = true;
-//     }
-// });
-
-// message.addEventListener('change', (e) => {
-//     if(e.target.value.length === 200){
-//         alert('Solo puedes usasr un maximo de 200 caracteres');
-//     } else if(e.target.value.length < 20){
-//         alert('Tu mensaje debe tener mas de 20 caracteres');
-//     }else{
-//         formIsValid.message = true;
-//     }
-// });
-
-// //evento para prevenir que se envien los datos sin validar
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     validateForm();
-// })

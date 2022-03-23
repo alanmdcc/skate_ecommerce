@@ -8,6 +8,7 @@
 }
 
 .bg-contact{
+    margin-bottom: 3rem;
     background-color: red;
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.7);
@@ -19,7 +20,7 @@
 }
 
 #logo{
-    width: 10%;
+    width: 50%;
 }
 
 .button-contact{
@@ -131,11 +132,16 @@
 
 .form--mensaje-exito-activo{
     display: block;
-}
+} */
 
 /* Estilos para validacion */
+<<<<<<< HEAD
 /*
 .form--group-correcto .form--validation--estado{
+=======
+
+/* .form--group-correcto .form--validation--estado{
+>>>>>>> 145f34066e63919d19d0dd086ff9385f93ecd5cc
     color: #1ed12d;
     opacity: 1;
 }

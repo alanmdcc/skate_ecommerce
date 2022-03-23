@@ -30,12 +30,12 @@
     display: none;
 }
 .orange-mask{
-    background-color: #ff6b08;
+    background-color: #12231d;
     opacity: 0.75;
 }
 
 .yellow-mask{
-    background-color: #ffe726;
+    background-color: #12231d;
     opacity: 0.75;
 }
 
@@ -48,14 +48,14 @@
 #small-circle-2{
     top: 60px;
     left: 472px;
-    background-color: #ffe726;
+    background-color: #12231d;
 
 }
 
 #small-circle-3{
     top: 27px;
     left: 782px;
-    background-color: #ffe726;
+    background-color: #12231d;
 
 }
 
@@ -78,12 +78,13 @@
 #middle-circle-3{
     top: 465px;
     left: 117px;
-    background-color: #0c5485;
+    background-color: #12231d;
 }
 
 #middle-circle-4{
-    top: 453px;
-    left: 349px;
+    top: 510px;
+    left: 350px;
+    background-color: #12231d;
 }
 
 #middle-circle-5{
@@ -104,13 +105,13 @@
 #middle-circle-8{
     top: 120px;
     left: 832px;
-    background-color: #ff6b08;
+    background-color: #12231d;
 }
 
 #middle-circle-9{
     top: 491px;
     left: 814px;
-    background-color: #ffe726;
+    background-color: #12231d;
 }
 
 #big-circle-1{
@@ -168,12 +169,12 @@
         display: none;
     }
     .orange-mask{
-        background-color: #ff6b08;
+        background-color: #12231d;
         opacity: 0.75;
     }
 
     .yellow-mask{
-        background-color: #ffe726;
+        background-color: #12231d;
         opacity: 0.75;
     }
 
@@ -186,14 +187,14 @@
     #small-circle-2{
         top: 60px;
         left: 392px;
-        background-color: #ffe726;
+        background-color: #12231d;
 
     }
 
     #small-circle-3{
         top: 27px;
         left: 702px;
-        background-color: #ffe726;
+        background-color: #12231d;
 
     }
 
@@ -216,12 +217,13 @@
     #middle-circle-3{
         top: 465px;
         left: 37px;
-        background-color: #0c5485;
+        background-color: #12231d;
     }
 
     #middle-circle-4{
-        top: 453px;
+        top: 510px;
         left: 269px;
+        background-color: #12231d;
     }
 
     #middle-circle-5{
@@ -242,13 +244,13 @@
     #middle-circle-8{
         top: 120px;
         left: 752px;
-        background-color: #ff6b08;
+        background-color: #12231d;
     }
 
     #middle-circle-9{
         top: 491px;
         left: 734px;
-        background-color: #ffe726;
+        background-color: #12231d;
     }
 
     #big-circle-1{
@@ -307,14 +309,14 @@
     #small-circle-2{
         top: 50px;
         left: 430px;
-        background-color: #ffe726;
+        background-color: #12231d;
     
     }
     
     #small-circle-3{
         top: 590px;
         left: 390px;
-        background-color: #ffe726;
+        background-color: #12231d;
     
     }
     
@@ -337,11 +339,11 @@
     #middle-circle-3{
         top: 30px;
         left: 130px;
-        background-color: #0c5485;
+        background-color: #12231d;
     }
     
     #middle-circle-4{
-        top: 400px;
+        top: 430px;
         left: 50px;
     }
     
@@ -363,13 +365,13 @@
     #middle-circle-8{
         top: 240px;
         left: 510px;
-        background-color: #ff6b08;
+        background-color: #12231d;
     }
     
     #middle-circle-9{
         top: 540px;
         left: 200px;
-        background-color: #ffe726;
+        background-color: #12231d;
     }
     
     #big-circle-1{
@@ -426,14 +428,14 @@
     #small-circle-2{
         top: 50px;
         left: 370px;
-        background-color: #ffe726;
+        background-color: #12231d;
     
     }
     
     #small-circle-3{
         top: 350px;
         left: 210px;
-        background-color: #ffe726;
+        background-color: #12231d;
     
     }
     
@@ -456,12 +458,13 @@
     #middle-circle-3{
         top: 50px;
         left: 110px;
-        background-color: #0c5485;
+        background-color: #12231d;
     }
     
     #middle-circle-4{
-        top: 360px;
-        left: -10px;
+        top: 380px;
+        left: 50px;
+        background-color: #12231d;
     }
     
     #middle-circle-5{
@@ -482,13 +485,13 @@
     #middle-circle-8{
         top: 245px;
         left: 370px;
-        background-color: #ff6b08;
+        background-color: #12231d;
     }
     
     #middle-circle-9{
         top: 460px;
         left: 160px;
-        background-color: #ffe726;
+        background-color: #12231d;
     }
     
     #big-circle-1{
@@ -546,9 +549,7 @@
     }
     
     #middle-circle-4{
-        top: 0px;
-        left: 0px;
-        position: static;
+        display: none;
     }
     
     #middle-circle-5{

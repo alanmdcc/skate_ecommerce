@@ -1,9 +1,5 @@
-#gerardo-circle{
-
-}
-
 #julio-circle{
-
+    background-image: url(../assets/about-us-pictures/JCA.jpg);
 }
 
 #david-circle{
@@ -289,7 +285,7 @@ display: none;
     }
 
     .gray{
-        -webkit-filter: none; /* Webkit */
+        -webkit-filter: grayscale(0.5); /* Webkit */
         filter: none; /* IE6-9 */
         filter: none; /* W3C */
     }
