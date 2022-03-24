@@ -1,5 +1,8 @@
 const navbarWrapper = document.getElementById('navbar-wrapper');
 
+// asignamos valores de la url
+
+
 let navbar = `
     <div class="container-fluid">
 
@@ -20,30 +23,30 @@ let navbar = `
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto d-flex justify-content-around" style="width: 100%;">
                             
-                        <li class="nav-item active">
-                            <a class="nav-link" id="inicio" href="../index.html">Inicio <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link  active" id="inicio" href="../index.html">Inicio <span class="sr-only">(current)</span></a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./about_us.html">Nosotros</a>
+                            <a class="nav-link" href="./about_us.html">Nosotros</a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Pennyboards</a>
+                                <a class="dropdown-item" href="./penny.html">Pennyboards</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./longboard.html">Longboards</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Skates</a>
+                                <a class="dropdown-item" href="./skates.html">Skates</a>
                             </div>
                         </li>
                     
                 
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./contact.html">Contacto</a>
+                            <a class="nav-link" id="contacto" href="./contact.html">Contacto</a>
                         </li>
             
                     </ul>
@@ -76,4 +79,18 @@ let navbar = `
     </div>
 `;
 
+
+/*let menuState = {
+    inicio: false,
+    nosotros: false,
+    productos: false,
+    contacto: false
+}*/
+
 navbarWrapper.innerHTML = navbar;
+
+
+console.log(nosotros);
+
+
+
