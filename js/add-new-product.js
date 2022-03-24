@@ -7,6 +7,7 @@ const productName = document.getElementById('input-name');
 const description = document.getElementById('input-description');
 const price = document.getElementById('input-price');
 const fileInput = document.getElementById('input-img');
+const reset = document.getElementById('reset-button');//obtenemos el boton reset
 
 let productos = [];
 let filePath = "";
@@ -131,3 +132,16 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     validateForm();
 })
+
+reset.addEventListener('click', (e) => {
+	document.querySelectorAll('.is-invalid').forEach((icono) => {
+		icono.classList.remove('is-invalid');
+	});
+	document.querySelectorAll('.is-valid').forEach((icono) => {
+		icono.classList.remove('is-valid');
+	});
+	Object.keys(formIsValid).forEach(campo => {
+		formIsValid[campo] = false;
+	})
+}
+)

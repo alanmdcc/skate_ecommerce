@@ -7,6 +7,7 @@ const username= document.getElementById('Name');
 const useremail= document.getElementById('email');
 const userphone= document.getElementById('Cellphone');
 const userpass= document.getElementById('password');
+const reset = document.getElementById('reset-button');//obtenemos el boton reset
 
 const expresiones = {
     name: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -116,3 +117,16 @@ formulario.addEventListener('submit', (e) => {
     }
 
 });
+
+reset.addEventListener('click', (e) => {
+	document.querySelectorAll('.is-invalid').forEach((icono) => {
+		icono.classList.remove('is-invalid');
+	});
+	document.querySelectorAll('.is-valid').forEach((icono) => {
+		icono.classList.remove('is-valid');
+	});
+	Object.keys(campos).forEach(campo => {
+		campos[campo] = false;
+	})
+}
+)
