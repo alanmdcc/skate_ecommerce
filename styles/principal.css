@@ -91,6 +91,69 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
+.position-1{
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+}
+
+.texto-slide1{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 61px;
+  font-weight: 400;
+  font-family: 'Outfit', sans-serif;
+  color: rgb(255, 255, 255);
+}
+.position-slide1{
+position: absolute;
+top: 70%;
+left: 30%;
+transform: translate(-50%, -50%);
+}
+
+.texto-img2{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 61px;
+  font-weight: 400;
+  font-family: 'Outfit', sans-serif;
+  color: rgb(255, 255, 255);
+}
+.position2{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+
+.position2-1{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  text-align: center;
+  }
+
+.logo-img{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.position-logo{
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+
   @media (max-width: 1024px) {
     .card {
       width: 33.3%;
