@@ -81,20 +81,21 @@ h2 {
     font-size: 61px;
     font-weight: 400;
     font-family: 'Outfit', sans-serif;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: left;
 }
 
 .position{
   position: absolute;
   top: 50%;
-  left: 75%;
+  left: 94%;
   transform: translate(-50%, -50%);
 }
 
 .position-1{
   position: absolute;
   top: 40%;
-  left: 75%;
+  left: 90%;
   transform: translate(-50%, -50%);
   font-weight: 700;
 }
@@ -154,40 +155,58 @@ text-align: center;
 }
 
 
-  @media (max-width: 1024px) {
-    .card {
-      width: 33.3%;
-    }
-    .texto-img{
-      font-size: large;
-     }
+@media (max-width: 1024px) {
+  .card {
+    width: 33.3%;
   }
-  
-  @media (max-width: 768px) {
-     .card {
-      width: 50%;
-    }
-    .texto-img{
-     font-size: large;
-    }
-  }
-  
-  @media (max-width: 528px) {
-   .card {
-      width: 100%;
-      justify-content: center;
-      display: inline;
-      
-    }
-    .texto-img{
-      font-size:large;
-     }
-    
-  }
+  .texto-img{
+    font-size: large;
+   }
+   .texto-img2{
+    font-size: large;
+   }
+   .texto-slide1{
+    font-size: large;
+   }
+}
 
-  @media screen and (max-width:768px){
-    .carousel-item .img{
-        src:   url(../assets/img-bg-contact/bg-contact-sm.PNG);
-    }
+@media (max-width: 768px) {
+   .card {
+    width: 50%;
+  }
+  .texto-img{
+   font-size: large;
+  }
+  .texto-img2{
+    font-size: large;
+   }
+  .texto-slide1{
+    font-size: medium;
+   }
+}
+
+@media (max-width: 528px) {
+ .card {
+    width: 100%;
+    justify-content: center;
+    display: inline;
     
+  }
+  .texto-img{
+    font-size:large;
+   }
+   .texto-img2{
+    font-size: small;
+   }
+   .texto-slide1{
+    font-size:small;
+   }
+  
+}
+
+@media screen and (max-width:768px){
+  .carousel-item .img{
+      src:   url(../assets/img-bg-contact/bg-contact-sm.PNG);
+  }
+  
 }
