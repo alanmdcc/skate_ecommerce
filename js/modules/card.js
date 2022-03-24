@@ -43,6 +43,27 @@ export function card(object){
     return card;
 }
 
+export function cardIndex(object){
+
+    let card =  `    
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center">
+        <div class="card card-style">
+            <a href="./pages/detail.html?name=${object.name}" >
+                <img src="${object.img}" class="card-img-top img-product" alt="producto">
+            </a>
+            <div class="card-body p-1">
+                <div class="shop text-center">
+                    <a href="#"><img src="../assets/icons/shoppingcart.svg" class="img-cart" alt="cart"></a>
+                </div>
+                <p class="card-text text-center product-price">$${object.price.toLocaleString()}</p>
+            </div>
+        </div>
+    </div>
+    `;
+
+    return card;
+}
+
 //Muestra los productos alojados en el array en el id que se indique
 export function showProducts(array, id){
 
@@ -56,4 +77,15 @@ export function showProducts(array, id){
     wrapper.innerHTML = html;
 }
 
+export function showProductsIndex(array, id){
+
+    let html = '';
+    const wrapper = document.getElementById(id);
+
+    array.forEach((item) => {
+        html += cardIndex(item);
+    });
+
+    wrapper.innerHTML = html;
+}
 
