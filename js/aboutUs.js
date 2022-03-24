@@ -2,7 +2,8 @@
 let imgProfile = document.getElementsByClassName("img-profile");
 let textProfile = document.getElementsByClassName("text-profile");
 let containerProfile = document.getElementsByClassName("container-profile");
-let buttonProfile = document.getElementsByClassName("btn-profile");
+let buttonProfile = document.getElementsByClassName("btn-icon");
+let buttonCV = document.getElementsByClassName("btn-cv");
 
 
 function changeToBlur(container){//Specifiy the changes when a focus container changes to blur
@@ -15,7 +16,6 @@ function changeToBlur(container){//Specifiy the changes when a focus container c
     img.classList.remove("change-size"); //Return the image to the original size
     img.classList.add("change-size-hover"); //Return the hover change size property to the image
     img.classList.add("change-size-decrease"); //Animation to turn the image to its original class
-    container.classList.remove("bg-dark");
     cover.classList.add("bg-black-reverse");//Animation to turn the cover from black to transparent
     img.classList.remove("img-shadow-box");
     container.classList.remove("move-container");
@@ -33,7 +33,6 @@ function changeToFocus(container){//Specifiy the changes when an image is focuse
     cover.classList.add("bg-black"); //Transition of the cover to black to cover the blurred elements
     img.classList.remove("change-size-decrease");
     cover.classList.remove("bg-black-reverse");
-    container.classList.add("bg-dark"); //Animation to turn the cover to black
     img.classList.add("img-shadow-box"); //Add a shadow to the image when focused
     container.classList.add("move-container"); //Move the container to the center
     container.classList.remove("gray");
@@ -79,11 +78,23 @@ for(let ctn of containerProfile){
     });
 }; //for(let ctn of containerProfile)
 
-//Aply a click event to all the buttons to return the page to a blur state
+//Aply a click event to all the icon buttons to return the page to a blur state
 for(let btn of buttonProfile){
     btn.addEventListener("click",function(e){
         let container = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode; //Get the container element
         let img = container.getElementsByClassName("img-profile")[0]; //Get the image inside container
+        console.log(container);
+        changeToBlur(container);//Change to blur state
+        img.classList.remove("flag"); //Remove the flag so the changeToFocus can be triggered with the image
+    })
+};// for(let btn of buttonProfile)
+
+//Aply a click event to all the CV buttons to return the page to a blur state
+for(let btn of buttonCV){
+    btn.addEventListener("click",function(e){
+        let container = e.target.parentNode.parentNode.parentNode.parentNode; //Get the container element
+        let img = container.getElementsByClassName("img-profile")[0]; //Get the image inside container
+        console.log(container);
         changeToBlur(container);//Change to blur state
         img.classList.remove("flag"); //Remove the flag so the changeToFocus can be triggered with the image
     })

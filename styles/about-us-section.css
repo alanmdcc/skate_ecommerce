@@ -4,6 +4,7 @@
     height: 90px;
     border-radius: 50%;
 }
+
 .middle-circle{
     position: absolute;
     width: 180px;
@@ -16,53 +17,56 @@
     width: 270px;
     height: 270px;
     border-radius: 50%;
+    transition: .4s;
+    background-color: #262625;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.blue-mask{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-color: #0c5485;
-    opacity: 0.5;
+.logo-circle{
+    transition: 0.4s;
 }
 
-.blue-mask:hover{
-    display: none;
+.logo-circle:hover{
+    transform: scale(1.1);
 }
+
+
 .orange-mask{
-    background-color: #12231d;
+    background-color: #262625;
     opacity: 0.75;
 }
 
 .yellow-mask{
-    background-color: #12231d;
+    background-color: #262625;
     opacity: 0.75;
 }
 
 #small-circle-1{
     top: 84px;
     left: 112px;
-    background-color: #12231d;
+    background-color: #262625;
 }
 
 #small-circle-2{
     top: 60px;
     left: 472px;
-    background-color: #12231d;
+    background-color: #262625;
 
 }
 
 #small-circle-3{
     top: 27px;
     left: 782px;
-    background-color: #12231d;
+    background-color: #262625;
 
 }
 
 #small-circle-4{
     top: 350px;
     left: 923px;
-    background-color: #12231d
+    background-color: #262625
 }
 
 #middle-circle-1{
@@ -78,13 +82,13 @@
 #middle-circle-3{
     top: 465px;
     left: 117px;
-    background-color: #12231d;
+    background-color: #262625;
 }
 
 #middle-circle-4{
     top: 510px;
     left: 350px;
-    background-color: #12231d;
+    background-color: #262625;
 }
 
 #middle-circle-5{
@@ -105,28 +109,18 @@
 #middle-circle-8{
     top: 120px;
     left: 832px;
-    background-color: #12231d;
+    background-color: #262625;
 }
 
 #middle-circle-9{
     top: 491px;
     left: 814px;
-    background-color: #12231d;
+    background-color: #262625;
 }
 
 #big-circle-1{
     top: 216px;
     left: 344px;
-    overflow: hidden;
-    object-fit: cover;
-    cursor: pointer;
-}
-
-#big-circle-1:hover{
-    top: 201px;
-    left: 329px;
-    width: 300px;
-    height: 300px;
 }
 
 .container-circles{
@@ -137,13 +131,11 @@
 
 @media screen and (max-width:1200px){
     .small-circle{
-        position: absolute;
         width: 90px;
         height: 90px;
         border-radius: 50%;
     }
     .middle-circle{
-        position: absolute;
         width: 180px;
         height: 180px;
         border-radius: 50%;
@@ -156,52 +148,30 @@
         border-radius: 50%;
     }
 
-
-    .blue-mask{
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background-color: #0c5485;
-        opacity: 0.5;
-    }
-
-    .blue-mask:hover{
-        display: none;
-    }
-    .orange-mask{
-        background-color: #12231d;
-        opacity: 0.75;
-    }
-
-    .yellow-mask{
-        background-color: #12231d;
-        opacity: 0.75;
-    }
-
     #small-circle-1{
         top: 84px;
         left: 32px;
-        background-color: #12231d;
+        background-color: #262625;
     }
 
     #small-circle-2{
         top: 60px;
         left: 392px;
-        background-color: #12231d;
+        background-color: #262625;
 
     }
 
     #small-circle-3{
         top: 27px;
         left: 702px;
-        background-color: #12231d;
+        background-color: #262625;
 
     }
 
     #small-circle-4{
         top: 350px;
         left: 843px;
-        background-color: #12231d
+        background-color: #262625
     }
 
     #middle-circle-1{
@@ -217,13 +187,13 @@
     #middle-circle-3{
         top: 465px;
         left: 37px;
-        background-color: #12231d;
+        background-color: #262625;
     }
 
     #middle-circle-4{
         top: 510px;
         left: 269px;
-        background-color: #12231d;
+        background-color: #262625;
     }
 
     #middle-circle-5{
@@ -244,35 +214,25 @@
     #middle-circle-8{
         top: 120px;
         left: 752px;
-        background-color: #12231d;
+        background-color: #262625;
     }
 
     #middle-circle-9{
         top: 491px;
         left: 734px;
-        background-color: #12231d;
+        background-color: #262625;
     }
 
     #big-circle-1{
         top: 216px;
         left: 264px;
-        overflow: hidden;
-        object-fit: cover;
-        cursor: pointer;
-    }
-
-    #big-circle-1:hover{
-        top: 201px;
-        left: 249px;
-        width: 300px;
-        height: 300px;
     }
 
     .container-circles{
         height: 720px;
     }
 
-    .hide{display: none;}/*agregué clase hide*/
+    .hide{display: none;}
 }
 
 @media screen and (max-width:992px){
@@ -291,39 +251,30 @@
         height: 240px;
     }
     
-    
-    .blue-mask{
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background-color: #0c5485;
-        opacity: 0.5;
-    }
-
     #small-circle-1{
         top: 540px;
         left: 500px;
-        background-color: #12231d;
+        background-color: #262625;
     }
     
     #small-circle-2{
         top: 50px;
         left: 430px;
-        background-color: #12231d;
+        background-color: #262625;
     
     }
     
     #small-circle-3{
         top: 590px;
         left: 390px;
-        background-color: #12231d;
+        background-color: #262625;
     
     }
     
     #small-circle-4{
         top: 320px;
         left: 160px;
-        background-color: #12231d
+        background-color: #262625
     }
     
     #middle-circle-1{
@@ -339,7 +290,7 @@
     #middle-circle-3{
         top: 30px;
         left: 130px;
-        background-color: #12231d;
+        background-color: #262625;
     }
     
     #middle-circle-4{
@@ -365,28 +316,18 @@
     #middle-circle-8{
         top: 240px;
         left: 510px;
-        background-color: #12231d;
+        background-color: #262625;
     }
     
     #middle-circle-9{
         top: 540px;
         left: 200px;
-        background-color: #12231d;
+        background-color: #262625;
     }
     
     #big-circle-1{
         top: 180px;
         left: 250px;
-        overflow: hidden;
-        object-fit: cover;
-        cursor: pointer;
-    }
-    
-    #big-circle-1:hover{
-        top: 180px;
-        left: 250px;
-        width: 240px;
-        height: 240px;
     }
     
     .container-circles{
@@ -410,39 +351,30 @@
         height: 180px;
     }
     
-    
-    .blue-mask{
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background-color: #0c5485;
-        opacity: 0.5;
-    }
-
     #small-circle-1{
         top: 480px;
         left: 360px;
-        background-color: #12231d;
+        background-color: #262625;
     }
     
     #small-circle-2{
         top: 50px;
         left: 370px;
-        background-color: #12231d;
+        background-color: #262625;
     
     }
     
     #small-circle-3{
         top: 350px;
         left: 210px;
-        background-color: #12231d;
+        background-color: #262625;
     
     }
     
     #small-circle-4{
         top: 290px;
         left: 100px;
-        background-color: #12231d
+        background-color: #262625
     }
     
     #middle-circle-1{
@@ -458,13 +390,13 @@
     #middle-circle-3{
         top: 50px;
         left: 110px;
-        background-color: #12231d;
+        background-color: #262625;
     }
     
     #middle-circle-4{
         top: 380px;
         left: 50px;
-        background-color: #12231d;
+        background-color: #262625;
     }
     
     #middle-circle-5{
@@ -485,28 +417,18 @@
     #middle-circle-8{
         top: 245px;
         left: 370px;
-        background-color: #12231d;
+        background-color: #262625;
     }
     
     #middle-circle-9{
         top: 460px;
         left: 160px;
-        background-color: #12231d;
+        background-color: #262625;
     }
     
     #big-circle-1{
         top: 140px;
         left: 180px;
-        overflow: hidden;
-        object-fit: cover;
-        cursor: pointer;
-    }
-    
-    #big-circle-1:hover{
-        top: 140px;
-        left: 180px;
-        width: 180px;
-        height: 180px;
     }
     
     .container-circles{
@@ -535,7 +457,6 @@
         top: 0px;
         left: 0px;
         position: static;
-
     }
     
     #middle-circle-2{
@@ -579,10 +500,6 @@
     }
     
     #big-circle-1{
-        display: none;
-    }
-    
-    #big-circle-1:hover{
         display: none;
     }
 
