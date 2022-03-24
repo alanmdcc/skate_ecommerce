@@ -82,7 +82,6 @@ let navbar = `
 navbarWrapper.innerHTML = navbar;
 
 
-console.log(nosotros);
 
 
 
