@@ -33,7 +33,6 @@ function validarCampoLogin(expresion, input, campo){
         document.getElementById(`${campo}`).classList.remove("is-invalid");
         document.getElementById(`${campo}`).classList.add("is-valid");
         campos[campo] = true;
-        console.log(campo + "cambió a true");
     } else {
         document.getElementById(`${campo}`).classList.add("is-invalid");
         document.getElementById(`${campo}`).classList.remove("is-valid");
@@ -79,4 +78,3 @@ formulario.addEventListener('submit', (e) => {
     }
 
 });
-

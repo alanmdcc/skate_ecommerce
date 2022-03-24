@@ -204,10 +204,8 @@ function crearTarjeta(producto){
 
 window.onload = () =>{
     let urlWindow = window.location.search;
-    console.log(urlWindow);
     const urlParams = new URLSearchParams(urlWindow);
     const nameProduct = urlParams.get("name");
-    console.log(nameProduct);
     let detailProduct=products.find(e => e.name == nameProduct)
 
 
