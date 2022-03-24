@@ -27,7 +27,9 @@ export function card(object){
     let card =  `    
     <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center">
         <div class="card card-style">
-            <img src="${object.img}" class="card-img-top img-product" alt="producto">
+            <a href="./detail.html?name=${object.name}" >
+                <img src="${object.img}" class="card-img-top img-product" alt="producto">
+            </a>
             <div class="card-body p-1">
                 <div class="shop text-center">
                     <a href="#"><img src="../assets/icons/shoppingcart.svg" class="img-cart" alt="cart"></a>

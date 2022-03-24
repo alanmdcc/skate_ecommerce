@@ -22,46 +22,46 @@ let products = [
         "description": "Patineta con ilustracion de una pesadilla"
     },
     {
-        "name": "Mitary Green",
+        "name": "Maths",
         "img": "../assets/img-products/skates/math.png",
         "price": 950,
-        "description": "Patineta con ilustracion de pulpo y calavera"
+        "description": "Patineta con ilustración de pulpo y calavera"
     },
     {
-        "name": "Orange",
+        "name": "Skulls",
         "img": "../assets/img-products/skates/skull.png",
         "price": 1120,
-        "description": "Patineta con ilustracion de hombre sobre monstruo"
+        "description": "Patineta con ilustración de hombre sobre monstruo"
     },
     {
-        "name": "Pistachio",
+        "name": "Spaceman",
         "img": "../assets/img-products/skates/space.png",
         "price": 1900,
-        "description": "Patineta con ilustracion de samurai y dragón"
+        "description": "Patineta con ilustración de samurai y dragón"
     },
     {
-        "name": "Purple",
+        "name": "Kitties",
         "img": "../assets/img-products/skates/cat.png",
         "price": 1750,
-        "description": "Patineta con ilustracion de dinosaurios"
+        "description": "Patineta con ilustración de dinosaurios"
     },
     {
-        "name": "Red",
+        "name": "Ovni",
         "img": "../assets/img-products/skates/alien2.png",
         "price": 1660,
-        "description": "Patineta con ilustracion de figuras"
+        "description": "Patineta con ilustración de figuras"
     },
     {
-        "name": "Turquoise",
+        "name": "Death",
         "img": "../assets/img-products/skates/girl_skull.png",
         "price": 1470,
-        "description": "Patineta con ilustracion de astronauta en otro planeta"
+        "description": "Patineta con ilustración de astronauta en otro planeta"
     },
     {
-        "name": "Yellow",
+        "name": "Nice Guy Bear",
         "img": "../assets/img-products/skates/beard.png",
         "price": 1200,
-        "description": "Patineta con ilustracion de lobo"
+        "description": "Patineta con ilustración de lobo"
     }
 ];
 
