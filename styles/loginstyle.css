@@ -1,17 +1,34 @@
 #contact-main{
-    background-image: url(../assets/img-bg-contact/bg-contact-lg.png);
+    background-image: url(../assets/img-bg/bg-login.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
    
 }
+.bg--color{
+    border-radius: 32px;
+}
+
+.bg--color::placeholder{
+    color: gray;
+}
+
+.link-color{
+    color: #EB6052;
+}
+
+.link-color:hover{
+    color: #DA2B3B;
+    text-decoration: none;
+}
 
 .bg-contact{
-    background-color: red;
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
+    backdrop-filter: blur(5px);
+
 }
 
 .container{
@@ -19,26 +36,31 @@
 }
 
 #logo{
-    width: 10%;
+    width: 50%;
 }
 
 .button-contact{
     font-weight: bold;
+    background-color: #EB6052;
+    border-radius: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
 }
 
 .button-contact:hover{
-    color:#FAED26;
-    
+    background-color:#DA2B3B;
+    color: white;
 }
 
 .form-control:focus{
-    border-color: #FAED26;
-    box-shadow: 0 0 10px #FAED26;
+    border-color: #53BFFF;
+    box-shadow: 0 0 10px 2px #53BFFF;
 }
 
 @media screen and (max-width:900px){
     #contact-main{
-        background-image: url(../assets/img-bg-contact/bg-contact-sm.PNG);
+        background-image: url(../assets/img-bg/bg-login.jpg);
     }
     
 }

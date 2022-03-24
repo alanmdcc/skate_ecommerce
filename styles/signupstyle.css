@@ -1,5 +1,5 @@
 #contact-main{
-    background-image: url(../assets/img-bg-contact/bg-contact-lg.png);
+    background-image: url(../assets/img-bg/bg-signup.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -8,10 +8,27 @@
 }
 
 .bg-contact{
-    background-color: red;
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.bg--color{
+    border-radius: 32px;
+}
+
+.bg--color::placeholder{
+    color: gray;
+}
+
+.link-color{
+    color: #EB6052;
+}
+
+.link-color:hover{
+    color: #DA2B3B;
+    text-decoration: none;
 }
 
 .container{
@@ -19,26 +36,32 @@
 }
 
 #logo{
-    width: 10%;
+    width: 50%;
 }
 
 .button-contact{
     font-weight: bold;
+    background-color: #EB6052;
+    border-radius: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
 }
-
+ 
 .button-contact:hover{
-    color:#FAED26;
+    background-color:#DA2B3B;
+    color: white;
     
 }
 
 .form-control:focus{
-    border-color: #FAED26;
-    box-shadow: 0 0 10px #FAED26;
+    border-color: #53BFFF;
+    box-shadow: 0 0 10px 2px #53BFFF;
 }
 
 @media screen and (max-width:900px){
     #contact-main{
-        background-image: url(../assets/img-bg-contact/bg-contact-sm.PNG);
+        background-image: url(../assets/img-bg/bg-signup.jpg);
     }
     
 }
@@ -63,85 +86,3 @@
 .form--mensaje-activo{
     display: block;
 }
-
-/* estilos para bloques de contacto */
-/*
-.form--group-input{
-    position: relative;
-}
-
-.form--input{
-    width: 100%;
-    background: #fff;
-    border: 3px solid transparent;
-    border-radius: 3px;
-    height: 45px;
-    line-height: 45px;
-    padding: 0 40px 0 10px;
-    transition: .3s ease all;
-}
-
-.form--input:focus{
-    border: 3px solid #0075FF;
-    outline: none;
-    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
-}
-
-.form--input--error{
-    font-size: 12px;
-    margin-bottom: 0;
-    display: none;
-}
-
-.form--input--error-activo{
-    display: block;
-}
-
-.form--validation--estado{
-    position: absolute;
-    right: 10px;
-    bottom: 15px;
-    z-index: 100;
-    font-size: 16px;
-    opacity: 0;
-}
-
-
-.form--mensaje-activo{
-    display: block;
-}
-
-.form--mensaje p{
-    margin: 0;
-}
-
-.form--mensaje-exito{
-    font-size: 14px;
-    color: #119200;
-    display: none;
-}
-
-.form--mensaje-exito-activo{
-    display: block;
-}
-*/
-/* Estilos para validacion */
-/*
-.form--group-correcto .form--validation--estado{
-    color: #1ed12d;
-    opacity: 1;
-}
-
-.form--group-incorrecto .form--label{
-    color: #bb2929;
-}
-
-.form--group-incorrecto .form--validation--estado{
-    color: #bb2929;
-    opacity: 1;
-}
-
-.form--group-incorrecto .form--input{
-    border: 3px solid #bb2929;
-}
-*/

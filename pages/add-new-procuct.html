@@ -31,35 +31,32 @@
   
                               <div class="form-group">
                                   <label for="input-name" class="font-weight-bold">Nombre</label>
-                                  <input type="text" class="form-control" id="input-name" aria-describedby="name-help">
-                                  <small id="name-help" class="form-text text-muted">Ingresa el nombre del producto.</small>
+                                  <input type="text" class="form-control bg--color" id="input-name" aria-describedby="name-help" placeholder="Nombre del producto.">
                                   <div class="invalid-feedback">El nombre debe tener entre 7 y 35 caracteres, sin usar caracteres especiales.</div>
                                 </div><!--/name-->
   
                               <div class="form-group">
                                 <label for="input-description" class="font-weight-bold">Descripción</label>
-                                <input type="text" class="form-control" id="input-description" aria-describedby="description-help">
-                                <small id="description-help" class="form-text text-muted">Ingresa la descripción del producto.</small>
+                                <input type="text" class="form-control bg--color" id="input-description" aria-describedby="description-help" placeholder="Descripción del producto.">
                                 <div class="invalid-feedback">La descripción del producto debe tener entre 7 y 50 caracteres, sin usar caracteres especiales.</div>
                               </div><!--/description-->
   
                               <div class="form-group">
                                 <label for="input-price" class="font-weight-bold">Precio</label>
-                                <input type="number" class="form-control" id="input-price" aria-describedby="price-help">
-                                <small id="price-help" class="form-text text-muted">Ingresa el precio del producto.</small>
+                                <input type="number" class="form-control bg--color" id="input-price" aria-describedby="price-help" placeholder="Precio del producto.">
                                 <div class="invalid-feedback">El precio debe ser un número entre 0 y 10,000.</div>
                               </div><!--/price-->
   
                               <div class="form-group">
                                   <label for="input-img" class="font-weight-bold">Imagen</label>
-                                  <input type="file" class="form-control btn btn-dark m-1 button-contact file-input" id="input-img" aria-describedby="img-help">
-                                  <small id="img-help" class="form-text text-muted">Ingresa la imagen del producto.</small>
+                                  <input type="file" class="form-control bg--color btn m-1 button-contact file-input" id="input-img" aria-describedby="img-help" placeholder="Imagen del producto.">
                                   <div class="invalid-feedback">El archivo de imagen debe ser .jpg, .jpeg o .png.</div>
+                                  <div class="valid-feedback">El archivo se subio correctamente.</div>
                                 </div><!--/image-->
                                 
                                 <div class="d-flex justify-content-around">
-                                  <button type="submit" class="btn btn-dark m-1 button-contact">AÑADIR PRODUCTO</button>
-                                  <button type="reset" class="btn btn-dark m-1 button-contact">BORRAR CAMPOS</button><!--/submit-->
+                                  <button type="submit" class="btn m-1 button-contact">AÑADIR PRODUCTO</button>
+                                  <button type="reset" class="btn m-1 button-contact">BORRAR CAMPOS</button><!--/submit-->
                                 </div>
 
                                 <div class="alert alert-success form--mensaje-exito mt-3" role="alert" id="alert-success">
