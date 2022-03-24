@@ -201,6 +201,14 @@ text-align: center;
    .texto-slide1{
     font-size:small;
    }
+   .news{
+    display:flex;
+    flex-direction: column;
+  }
+  .center{
+    width: 100%;
+    height: 200px;
+  }
   
 }
 
