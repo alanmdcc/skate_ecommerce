@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;900&display=swap');
+
 .navbar-config{
     height: 65px;
     background-color: #262625;
@@ -8,14 +10,51 @@
     height: 28px;
 }
 
-#inicio{
-    color: #EB6053;
+.active{
+    color: #EB6053 !important;
+}
+
+.active:hover{
+    color: white !important;
 }
 
 .nav-link{
     font-size: 21px;
     font-weight: 400;
     font-family: 'Outfit', sans-serif;
+    color: white;
+}
+
+.nav-link:hover{
+    color: #EB6053;
+}
+
+.dropdown-menu{
+    background-color: #262625;
+}
+
+.dropdown-item{
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #1e2125;
+    background-color: #e9ecef;
+  }
+
+.dropdown-item:hover{
+    color:#EB6053;
+    background-color: #4a4a4a;
+}
+
+.dropdown-divider{
+    border-top: 1px solid #4a4a4a;
+}
+
+.navbar-toggler-icon{
+    background-image: url("../assets/icons/menu.svg");
 }
 
 .btn-icon{

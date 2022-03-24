@@ -1,0 +1,41 @@
+.img-skate{
+    height: 40vh;
+    transition: 0.4s;
+}
+
+.img-skate:hover{
+    transform: scale(1.05);
+}
+
+.bg-detail{
+    height: 25vh;
+    width: 100%;
+}
+
+.skate-name{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.skate-desc{
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.skate-price{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-cart{
+    position: absolute;
+    right: 1.5rem;
+    top: 5rem;
+    height: 40px;
+    width: 40px;
+    transition: 0.4s;
+}
+
+.btn-cart:hover{
+    transform: scale(1.1);
+}
