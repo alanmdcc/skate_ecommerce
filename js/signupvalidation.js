@@ -55,7 +55,6 @@ function validarCampoSigup(expresion, input, campo){
         document.getElementById(`${campo}`).classList.remove("is-invalid");
         document.getElementById(`${campo}`).classList.add("is-valid");
         campos[campo] = true;
-        console.log(campo + "cambió a true");
     } else {
         document.getElementById(`${campo}`).classList.add("is-invalid");
         document.getElementById(`${campo}`).classList.remove("is-valid");
@@ -93,7 +92,7 @@ formulario.addEventListener('submit', (e) => {
     if(campos.Name && campos.email && campos.Cellphone && campos.password){
     //se crea un objeto json del usuario y se añade a un array
         addUser(usuarios,username.value,userphone.value,userpass.value,useremail.value);
-        console.log(usuarios);
+        /* console.log(usuarios); */
         formulario.reset();
 
         document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');
@@ -117,4 +116,3 @@ formulario.addEventListener('submit', (e) => {
     }
 
 });
-

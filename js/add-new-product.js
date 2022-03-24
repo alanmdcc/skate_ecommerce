@@ -28,8 +28,7 @@ function validateForm(){
     const valid = formValues.findIndex((value) => value == false);
     if(valid === -1){
         addItem(productos,productName.value,filePath,price.value,description.value);
-        console.log("Producto creado con éxito");
-        console.log(productos);
+        /* console.log(productos); */
         resetForm();
 
         document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');

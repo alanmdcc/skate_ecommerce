@@ -79,14 +79,6 @@ let navbar = `
     </div>
 `;
 
-
-/*let menuState = {
-    inicio: false,
-    nosotros: false,
-    productos: false,
-    contacto: false
-}*/
-
 navbarWrapper.innerHTML = navbar;
 
 

@@ -83,7 +83,6 @@ for(let btn of buttonProfile){
     btn.addEventListener("click",function(e){
         let container = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode; //Get the container element
         let img = container.getElementsByClassName("img-profile")[0]; //Get the image inside container
-        console.log(container);
         changeToBlur(container);//Change to blur state
         img.classList.remove("flag"); //Remove the flag so the changeToFocus can be triggered with the image
     })
@@ -94,12 +93,10 @@ for(let btn of buttonCV){
     btn.addEventListener("click",function(e){
         let container = e.target.parentNode.parentNode.parentNode.parentNode; //Get the container element
         let img = container.getElementsByClassName("img-profile")[0]; //Get the image inside container
-        console.log(container);
         changeToBlur(container);//Change to blur state
         img.classList.remove("flag"); //Remove the flag so the changeToFocus can be triggered with the image
     })
 };// for(let btn of buttonProfile)
-
 
 
 
