@@ -1,12 +1,12 @@
 // Validacion formulario
 const formulario = document.getElementById('form-contact'); //accedemos al bloque del formulario
 const inputs = document.querySelectorAll('input'); // obtenemos todos los inputs de la pag
-
+const reset = document.getElementById('reset-button');//obtenemos el boton reset
 const expresiones = {
 	name: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //resumida la linea que dejaron
 	telefono: /^\d{10,10}$/, // 7 a 14 numeros.
-    msg: /^[a-zA-ZÀ-ÿ\s]{10,200}$/, // Letras y espacios, pueden llevar acentos.
+    msg: /^[a-zA-ZÀ-ÿ]{10,200}$/, // Letras pueden llevar acentos.
 }
 // creamos un objeto en donde se registra el estatus de cada campo
 const campos = {
@@ -85,3 +85,16 @@ formulario.addEventListener('submit', (e) => {
 		}, 5000);
 	}
 })
+
+reset.addEventListener('click', (e) => {
+	document.querySelectorAll('.is-invalid').forEach((icono) => {
+		icono.classList.remove('is-invalid');
+	});
+	document.querySelectorAll('.is-valid').forEach((icono) => {
+		icono.classList.remove('is-valid');
+	});
+	Object.keys(campos).forEach(campo => {
+		campos[campo] = false;
+	})
+}
+)
