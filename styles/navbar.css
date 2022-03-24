@@ -8,15 +8,25 @@
     height: 28px;
 }
 
-#inicio{
-    color: #EB6053;
+.active{
+    color: #EB6053 !important;
+}
+
+.active:hover{
+    color: white !important;
 }
 
 .nav-link{
     font-size: 21px;
     font-weight: 400;
     font-family: 'Outfit', sans-serif;
+    color: white;
 }
+
+.nav-link:hover{
+    color: #EB6053;
+}
+
 
 .btn-icon{
     background-color: transparent;
