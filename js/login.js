@@ -1,8 +1,29 @@
 // Validacion formulario
 const formulario = document.getElementById('form-contact'); //accedemos al bloque del formulario
 const inputs = document.querySelectorAll('input'); // obtenemos todos los inputs de la pag
-const username= document.getElementById('Name');
+const useremail= document.getElementById('email');
 const userpass= document.getElementById('password');
+
+//creación de usuarios para almacenar en local storage
+var user = {
+    "useremail": "correo@gmail.com",
+    "password": "password"
+};
+var jsonUseremail = JSON.stringify(user.useremail);
+var jsonPassword = JSON.stringify(user.password);
+
+localStorage.setItem("Juseremail", jsonUseremail);
+localStorage.setItem("Jpassword", jsonPassword);
+
+var Juseremail = localStorage.getItem("Juseremail");
+var Jpassword = localStorage.getItem("Jpassword");
+
+//compara los datos ingresados de usuario con los de local storage
+/*function comparar(useremail,Juseremail,userpass,Jpassword){
+   if(useremail.value==Juseremail && userpass.value==Jpassword){
+       window.alert("Sesión Iniciada");
+   }
+}*/
 
 const expresiones = {
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //resumida la linea que dejaron
@@ -48,15 +69,44 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validarFormularioLogin);
 })
 
+/*function loginFunc(e){
+    event.preventDefault();
+    const useremail= document.getElementById('email').value;
+    const userpass= document.getElementById('password').value;
+
+    let user =localStorage.getItem(useremail);
+    let data= JSON.parse(user);
+
+    if(useremail==data.useremail && userpass===data.password){
+        window.alert("Sesión Iniciada");    
+        console.log("Sesion Iniciada");
+    }
+}*/
 
 // cuando se presiona el boton de enviar se ejecuta un prevent default
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    
+    
     if(campos.email && campos.password){
     //se crea un objeto json del usuario y se añade a un array
-        formulario.reset();
+    const useremail= document.getElementById('email').value;
+    const userpass= document.getElementById('password').value;
 
+    let user =localStorage.getItem(useremail);
+    let pass =localStorage.getItem(userpass);
+    let datau= JSON.parse(user);
+    let datap= JSON.parse(pass);
+
+    if(useremail==datau && userpass===datap){
+        window.alert("Sesión Iniciada");    
+        console.log("Sesion Iniciada");
+    }
+
+
+        console.log(useremail);
+        console.log(Juseremail);
+    formulario.reset();
         // document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');
         // setTimeout(() => {
         //     document.getElementById('alert-success').classList.remove('form--mensaje-exito-activo');
