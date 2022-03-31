@@ -7,7 +7,7 @@ let navbar = `
 
     <nav class="row navbar navbar-expand-lg justify-content-between navbar-config">
 
-            <div class="col-lg-3 col-md-6 col-7 p-0">
+            <div class="col-lg-3 col-md-6 col-8 p-0">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -15,6 +15,10 @@ let navbar = `
                 <a class="navbar-brand" href="../index.html">
                     <img class="logo" src="../assets/icons/logo_vers_blanco_400x100.svg" alt="">
                 </a>
+
+                <a  href="./blog.html">
+                    <img class="olympics-icon" src="../assets/icons/olympics.svg" alt="">
+                </a> 
             </div><!--logo-->
 
                 <div class="col-lg-6 col-md-3 col-sm-3 col-5 menu-hamburger">
