@@ -1,0 +1,58 @@
+body{
+    min-height: 100vh;
+    position: relative;
+}
+
+.main{
+    padding-bottom: 50px;
+}
+
+#flyer-puerto-vallarta{
+    height: 25rem;
+}
+
+@media screen  and (max-width:768px){
+    .main{
+        padding-bottom: 100px;
+    }
+
+    #flyer-puerto-vallarta{
+        height: 20rem;
+    }
+}
+
+
+.olympic-symbol{
+    width: 5rem;
+}
+
+#skate-symbol{
+    height: 10rem;
+}
+
+@media screen  and (max-width:576px){
+    #skate-symbol{
+        display:none;
+    }
+
+    #flyer-puerto-vallarta{
+        height: 30rem;
+    }
+}
+
+.skate-park{
+    width: 100%;
+}
+
+.icon-femepar{
+    height: 3rem;
+}
+
+#infography{
+    width: 100%;
+}
+
+#femepar{
+    width: 100%;
+}
+

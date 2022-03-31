@@ -1,7 +1,3 @@
-#julio-circle{
-    background-image: url(../assets/about-us-pictures/JCA.jpg);
-}
-
 #david-circle{
     background-image: url(../assets/about-us-pictures/david.jpg);
 }
@@ -320,6 +316,6 @@ display: none;
     }
 
     #main{
-        height:3000px;
+        height:2500px;
     }
 }

@@ -11,6 +11,11 @@
     padding: 2rem;
 }
 
+.footer-cart{
+    position: absolute;
+    bottom: 0px;
+}
+
 .logo-footer{
     max-width: 5vw;
     min-width: 50px;
@@ -19,3 +24,4 @@
 .container-texto{
     font-weight: bold;
 }
+

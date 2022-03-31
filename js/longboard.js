@@ -1,5 +1,6 @@
 //importar funciones del modulo card
 import {card, showProducts} from './modules/card.js';
+import { addCart} from './modules/addCart.js';
 
 let html = '';
 let recommendedProducts = [
@@ -67,3 +68,4 @@ let recommendedProducts = [
 ];
 
 showProducts(recommendedProducts, 'list-items');
+addCart();
