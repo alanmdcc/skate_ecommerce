@@ -72,7 +72,7 @@ let navbar = `
                     </button><!--login-->
 
                     <button class="btn-icon">
-                    <a href="#">
+                    <a href="./cart.html">
                         <img class="img-icon" src="../assets/icons/carrito_barmenu_100x100.svg" alt="">
                     </a>
                     </button><!--cart-->
