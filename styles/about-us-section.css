@@ -92,8 +92,9 @@
 }
 
 #middle-circle-5{
-    top: 399px;
+    top: 470px;
     left: 580px;
+    background-color: #262625;
 }
 
 #middle-circle-6{
@@ -197,8 +198,8 @@
     }
 
     #middle-circle-5{
-        top: 399px;
-        left: 500px;
+        top: 470px;
+        left: 490px;
     }
 
     #middle-circle-6{
@@ -299,13 +300,13 @@
     }
     
     #middle-circle-5{
-        top: 430px;
-        left: 240px;
+        top: 440px;
+        left: 320px;
     }
     
     #middle-circle-6{
-        top: 390px;
-        left: 410px;
+        top: 240px;
+        left: 430px;
     }
     
     #middle-circle-7{
@@ -314,8 +315,8 @@
     }
     
     #middle-circle-8{
-        top: 240px;
-        left: 510px;
+        top: 390px;
+        left: 470px;
         background-color: #262625;
     }
     
@@ -401,12 +402,12 @@
     
     #middle-circle-5{
         top: 380px;
-        left: 160px;
+        left: 260px;
     }
     
     #middle-circle-6{
-        top: 360px;
-        left: 280px;
+        top: 245px;
+        left: 270px;
     }
     
     #middle-circle-7{
@@ -415,8 +416,8 @@
     }
     
     #middle-circle-8{
-        top: 245px;
-        left: 370px;
+        top: 360px;
+        left: 380px;
         background-color: #262625;
     }
     
@@ -474,9 +475,7 @@
     }
     
     #middle-circle-5{
-        top: 0px;
-        left: 0px;
-        position: static;
+        display: none;
     }
     
     #middle-circle-6{
@@ -505,6 +504,10 @@
 
     .container-circles{
         height: 1800px;
+    }
+
+    .message-about-us{
+        display: none;
     }
 }
 
