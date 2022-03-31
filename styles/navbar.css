@@ -10,6 +10,10 @@
     height: 28px;
 }
 
+.olympics-icon{
+    width: 59px;
+    height: 28px;
+}
 .active{
     color: #EB6053 !important;
 }
@@ -139,6 +143,11 @@
         height: 20px;
     }
 
+    .olympics-icon{
+        width: 41px;
+        height: 20px;
+    }
+
     .btn-icon{
         width: 20px;
         height: 20px;
@@ -153,8 +162,13 @@
 @media screen and (max-width: 320px){
 
     .logo{
-        width: 80px;
-        height: 20px;
+        width: 72px;
+        height: 18px;
+    }
+
+    .olympics-icon{
+        width: 37px;
+        height: 18px;
     }
 
     .btn-icon{
