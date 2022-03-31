@@ -78,6 +78,13 @@ formulario.addEventListener('submit', (e) => {
 			campos[campo] = false;
 		})
 
+		Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: 'Mensaje enviado con éxito',
+            footer: '<a href="">...</a>'
+          })  
+
 	} else {
 		document.getElementById('alert-danger').classList.add('form--mensaje-activo');
 		setTimeout(() => {

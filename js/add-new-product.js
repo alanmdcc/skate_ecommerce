@@ -131,6 +131,12 @@ fileInput.addEventListener('change', (e) => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     validateForm();
+    Swal.fire({
+        icon: 'success',
+        title: 'Éxito',
+        text: 'Producto Registrado',
+        footer: '<a href="">...</a>'
+      })  
 })
 
 reset.addEventListener('click', (e) => {

@@ -32,7 +32,11 @@ function loginFunc(e){
     //let data= JSON.stringify(user);
 
     if(Juseremail==localUseremail && Juserpass==localUserpass){
-    window.alert("Sesión iniciada");
-    console.log("Sesión iniciada");
+        Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: 'Sesión iniciada',
+            footer: '<a href="">...</a>'
+          })
    }//if
 }//logingFunc
