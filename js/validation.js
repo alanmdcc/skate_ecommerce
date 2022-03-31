@@ -65,11 +65,6 @@ formulario.addEventListener('submit', (e) => {
         formulario.submit();
 		formulario.reset();
 
-		document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('alert-success').classList.remove('form--mensaje-exito-activo');
-		}, 5000);
-
 		document.querySelectorAll('.is-valid').forEach((icono) => {
 			icono.classList.remove('is-valid');
 		});
@@ -81,11 +76,15 @@ formulario.addEventListener('submit', (e) => {
 		Swal.fire({
             icon: 'success',
             title: 'Éxito',
-            text: 'Mensaje enviado con éxito',
-            footer: '<a href="">...</a>'
+            text: 'Se abrió tu administrador de correos para terminar el proceso',
           })  
 
 	} else {
+		Swal.fire({
+            icon: 'error',
+            text: 'Favor de completar correctamente el formulario',
+          })
+		  
 		document.getElementById('alert-danger').classList.add('form--mensaje-activo');
 		setTimeout(() => {
 			document.getElementById('alert-danger').classList.remove('form--mensaje-activo');

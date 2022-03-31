@@ -211,6 +211,10 @@ export function addCart() {
             productosStorage = JSON.stringify(productosCarrito);
             localStorage.setItem("productosCarrito", productosStorage);
 
+            Swal.fire({
+                icon: 'success',
+                text: 'Se añadió el producto a tu carrito',
+              })  
         })
     }
 
