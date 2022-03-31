@@ -36,7 +36,7 @@ function loginFunc(e){
             icon: 'success',
             title: 'Éxito',
             text: 'Sesión iniciada',
-            footer: '<a href="">...</a>'
           })
+          setTimeout(()=>{window.location.href = "../index.html"},2000);
    }//if
 }//logingFunc
