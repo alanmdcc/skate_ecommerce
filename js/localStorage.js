@@ -6,6 +6,7 @@
         "useremail": "correo@gmail.com",
         "password": "password"
     };
+
     var json=JSON.stringify(user.useremail);
     var json2=JSON.stringify(user.password);
 
@@ -39,4 +40,5 @@ function loginFunc(e){
             footer: '<a href="">...</a>'
           })
    }//if
+
 }//logingFunc
