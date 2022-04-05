@@ -18,7 +18,7 @@ footer.innerHTML=`
 </div>
 <!-- texto de footer -->
 <div
-  class="container-texto ol-12 col-sm-12 col-md-4 col-lg-4 d-flex flex-column justify-content-around align-items-center">
+  class="ol-12 col-sm-12 col-md-4 col-lg-4 d-flex flex-column justify-content-around align-items-center">
   <p>Teléfono: 33-3333-3333</p>
   <p>Email: impuls8@gmail.com</p>
 </div>
