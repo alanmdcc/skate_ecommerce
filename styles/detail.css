@@ -1,3 +1,18 @@
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+main{
+    padding-bottom: 20rem;
+}
+
+@media screen and (max-width:768px){
+    main{
+        padding-bottom: 26rem;
+    }
+}
+
 .img-skate{
     height: 40vh;
     transition: 0.4s;
@@ -9,7 +24,19 @@
 
 .bg-detail{
     height: 25vh;
-    width: 100%;
+    width: 100vw;
+    margin-bottom: 9rem;
+    position: absolute;
+    bottom:0px;
+    background-image: url("../assets/img-bg/fondo_productos_2560x325.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:768px){
+    .bg-detail{
+        margin-bottom: 14rem;
+    }
 }
 
 .skate-name{
@@ -30,7 +57,7 @@
 .pstn-btn-cart{
     position: absolute;
     right: 0;
-    top: 5%;
+    top: 2%;
     height: 40px;
     width: 40px;
 }
