@@ -180,7 +180,9 @@ let products = [
     "price": 1200,
     "description": "Patineta con ilustración de lobo"
 }
-  ];
+];
+
+import { addCart} from './modules/addCart.js';
 
 function crearTarjeta(producto){
     let ancla = document.getElementById("product-container");
@@ -194,22 +196,24 @@ function crearTarjeta(producto){
             <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                 <h2 class="skate-name">${producto.name}</h2>
                 <div class="skate-desc">${producto.description}</div>
-                <div class="skate-price">$${producto.price}</div>
+                <div class="skate-price">$${producto.price.toLocaleString()}</div>
             </div>
         </section>
-        <img src="../assets/icons/botonrojo_compras_300x300.png" alt="carrito" class="btn-cart">
+        <div class="shop text-center pstn-btn-cart">
+          <a href="./cart.html?name=${producto.name}"><img src="../assets/icons/carrito_barmenu_100x100.png" class="btn-cart img-cart" id="img-cart" alt="cart"></a>
+        </div>
     `
     ancla.innerHTML = cardProducto
 }
 
-window.onload = () =>{
-    let urlWindow = window.location.search;
-    const urlParams = new URLSearchParams(urlWindow);
-    const nameProduct = urlParams.get("name");
-    let detailProduct=products.find(e => e.name == nameProduct)
+//<img src="../assets/icons/botonrojo_compras_300x300.png" alt="carrito" class="btn-cart">
 
 
-    
-    crearTarjeta(detailProduct);
-       
-}
+let urlWindow = window.location.search;
+const urlParams = new URLSearchParams(urlWindow);
+const nameProduct = urlParams.get("name");
+let detailProduct=products.find(e => e.name == nameProduct)
+
+crearTarjeta(detailProduct);
+addCart();
+

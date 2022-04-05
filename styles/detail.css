@@ -27,15 +27,36 @@
     font-weight: bold;
 }
 
-.btn-cart{
+.pstn-btn-cart{
     position: absolute;
-    right: 1.5rem;
-    top: 5rem;
+    right: 0;
+    top: 5%;
     height: 40px;
     width: 40px;
+}
+
+@media screen and (max-width:578px){
+    .pstn-btn-cart{
+        right:5%;
+    }
+}
+
+.btn-cart{
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
     transition: 0.4s;
 }
 
 .btn-cart:hover{
     transform: scale(1.1);
+}
+
+.shop{
+    background-color: #EC6053;
+    border-radius: 50%;
+}
+
+main{
+    position: relative;
 }
