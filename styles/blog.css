@@ -7,6 +7,15 @@ body{
     padding-bottom: 50px;
 }
 
+a{
+    color: #F2C74A;
+}
+
+a:hover{
+    color: #EC6053;
+    text-decoration: none;
+}
+
 #flyer-puerto-vallarta{
     height: 25rem;
 }
