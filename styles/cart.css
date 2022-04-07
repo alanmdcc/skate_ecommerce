@@ -73,3 +73,7 @@ body {
   background-color:#DA2B3B;
   color: white;
 }
+
+.hide{
+  display: none;
+}
