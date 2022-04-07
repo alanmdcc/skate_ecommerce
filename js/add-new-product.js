@@ -28,14 +28,15 @@ function validateForm(){
     //Vamos a buscar dentro del arreglo formValuer 
     const valid = formValues.findIndex((value) => value == false);
     if(valid === -1){
+        Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: 'Producto Registrado',
+          }) 
+
         addItem(productos,productName.value,filePath,price.value,description.value);
         /* console.log(productos); */
         resetForm();
-
-        document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('alert-success').classList.remove('form--mensaje-exito-activo');
-		}, 5000);
 
 		document.querySelectorAll('.is-valid').forEach((icono) => {
 			icono.classList.remove('is-valid');
@@ -45,6 +46,11 @@ function validateForm(){
 			formIsValid[campo] = false;
 		})
     }else{
+        Swal.fire({
+            icon: 'error',
+            text: 'Favor de completar correctamente el formulario',
+          })
+
         document.getElementById('alert-danger').classList.add('form--mensaje-activo');
 		setTimeout(() => {
 			document.getElementById('alert-danger').classList.remove('form--mensaje-activo');
@@ -130,13 +136,7 @@ fileInput.addEventListener('change', (e) => {
 //Detiene el evento submit y evalua si el formulario es válido
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    validateForm();
-    Swal.fire({
-        icon: 'success',
-        title: 'Éxito',
-        text: 'Producto Registrado',
-        footer: '<a href="">...</a>'
-      })  
+    validateForm(); 
 })
 
 reset.addEventListener('click', (e) => {

@@ -55,7 +55,7 @@ export function cardIndex(object){
             </a>
             <div class="card-body p-1">
                 <div class="shop text-center">
-                    <a href="#"><img src="./assets/icons/carrito_barmenu_100x100.png" class="img-cart" alt="cart"></a>
+                    <a href="./detail.html?name=${object.name}"><img src="./assets/icons/carrito_barmenu_100x100.png" class="img-cart" alt="cart"></a>
                 </div>
                 <p class="card-text text-center product-price">$${object.price.toLocaleString()}</p>
             </div>

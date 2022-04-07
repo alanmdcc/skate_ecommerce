@@ -1,11 +1,15 @@
+body {
+    min-height: 100vh;
+    position: relative;
+}
+  
 #contact-main{
+    height: 100vh;
     background-image: url(../assets/img-bg/bg-login.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-   
 }
+
 .bg--color{
     border-radius: 32px;
 }
