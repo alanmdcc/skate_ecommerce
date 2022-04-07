@@ -1,4 +1,4 @@
-    let email= document.getElementById('email').value;
+   /* let email= document.getElementById('email').value;
     let password= document.getElementById('password').value;
 
   //creación de usuarios para almacenar en local storage
@@ -41,4 +41,4 @@ function loginFunc(e){
           setTimeout(()=>{window.location.href = "../index.html"},2000);
    }//if
 
-}//logingFunc
+}//logingFunc*/

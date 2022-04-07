@@ -53,32 +53,56 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
     
+    let url = 'http://localhost:8081/api/login/';
     
     if(campos.email && campos.password){
     //se crea un objeto json del usuario y se añade a un array
-    fetch("http://localhost:8081/api/users/login/")
-  .then(res => res.json())
-  .then(productsArray => {
-
-    showProducts(productsArray, 'list-items');
-    addCart();
-  })
-  .catch(error => console.error('Error:', error));
+    console.log(userpass.value);
+    fetch(url, {
+        method: 'POST',
+        body:JSON.stringify({
+          userEmail: useremail.value,
+          password: userpass.value
+          }), 
+        headers:{
+          'Content-Type': 'application/json'
+        }
+      }).then(res => res.json())
+      
+      .then(response => { 
+          console.log(response);
+          if(response.accessToken.length!==0){Swal.fire({
+          icon: 'success',
+          title: 'Éxito',
+          text: 'Inicio de sesión exitoso',
+        }); window.sessionStorage.setItem("token", JSON.stringify(response));
+        window.sessionStorage.setItem("userLogged", JSON.stringify(
+            { userEmail: useremail.value }
+        ));
+    }
+      else{
+          console.log(useremail.value);
+          {Swal.fire({
+              icon: 'error',
+              title: 'Inicio de sesión fallido',
+              text: `Email o contraseña inválidos`,
+            })  }
+      }
+      })
+      .catch(error => console.error('Error:', error))
+  
+      ;
 
     formulario.reset();
-        // document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');
-        // setTimeout(() => {
-        //     document.getElementById('alert-success').classList.remove('form--mensaje-exito-activo');
-        // }, 5000);
-
-        // document.querySelectorAll('.is-valid').forEach((icono) => {
-        //     icono.classList.remove('is-valid');
-        // });
+    document.querySelectorAll('.is-valid').forEach((icono) => {
+        icono.classList.remove('is-valid');
+    });
 
         Object.keys(campos).forEach(campo => {
             campos[campo] = false;
         })
-
+   
+        setTimeout(()=>{window.location.href = "../index.html"},2000);
     } else {
         document.getElementById('alert-danger').classList.add('form--mensaje-activo');
         setTimeout(() => {
