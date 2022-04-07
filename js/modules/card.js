@@ -22,21 +22,19 @@ export function addItem(array, name, img, price, description){
 }
 
 //Crea una tarjeta dinamica solo de presentacion, con la imagen de muestra
-export function card(object){
-
-    let stringObject = JSON.stringify(object);
+export function card(product){
 
     let card =  `    
     <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center">
         <div class="card card-style">
-            <a href="./detail.html?name=${object.name}" >
-                <img src="${object.img}" class="card-img-top img-product" alt="producto">
+            <a href="./detail.html?id=${product.idProduct}" >
+                <img src="${product.productPicture}" class="card-img-top img-product" alt="producto">
             </a>
             <div class="card-body p-1">
                 <div class="shop text-center">
-                    <a href="./detail.html?name=${object.name}"><img src="../assets/icons/carrito_barmenu_100x100.png" class="img-cart" alt="cart"></a>
+                    <a href="./detail.html?id=${product.idProduct}"><img src="../assets/icons/carrito_barmenu_100x100.png" class="img-cart" alt="cart"></a>
                 </div>
-                <p class="card-text text-center product-price">$${object.price.toLocaleString()}</p>
+                <p class="card-text text-center product-price">$${product.priceProduct.toLocaleString()}</p>
             </div>
         </div>
     </div>
@@ -45,19 +43,19 @@ export function card(object){
     return card;
 }
 
-export function cardIndex(object){
+export function cardIndex(product){
 
     let card =  `    
     <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center">
         <div class="card card-style">
-            <a href="./pages/detail.html?name=${object.name}" >
-                <img src="${object.img}" class="card-img-top img-product" alt="producto">
+            <a href="./pages/detail.html?id=${product.idProduct}" >
+                <img src="${product.productPicture}" class="card-img-top img-product" alt="producto">
             </a>
             <div class="card-body p-1">
                 <div class="shop text-center">
-                    <a href="./detail.html?name=${object.name}"><img src="./assets/icons/carrito_barmenu_100x100.png" class="img-cart" alt="cart"></a>
+                    <a href="./detail.html?id=${product.idProduct}"><img src="./assets/icons/carrito_barmenu_100x100.png" class="img-cart" alt="cart"></a>
                 </div>
-                <p class="card-text text-center product-price">$${object.price.toLocaleString()}</p>
+                <p class="card-text text-center product-price">$${product.priceProduct.toLocaleString()}</p>
             </div>
         </div>
     </div>
