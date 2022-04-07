@@ -1,23 +1,25 @@
 //modulo card, donde pondremos los recursos necesarios para agregar un item y crear una tarjeta dinamica
 
 export class Item{
-    name= "";
-    img= "";
-    price=0;
-    description="";
+    nameProduct= "";
+    priceProduct= "";
+    descriptionProduct=0;
+    productPicture="";
+    idCategory=1
 
-    constructor(name, img, price, description){
-        this.name= name;
-        this.img=img;
-        this.price=price; 
-        this.description=description;
+    constructor(name, price, description, img, category){
+        this.nameProduct= name;
+        this.priceProduct=price; 
+        this.descriptionProduct=description;
+        this.productPicture=img;
+        this.idCategory=category;
     }
 }
 
 // Crea una nueva instancia de item y la agrega a un arreglo
-export function addItem(array, name, img, price, description){
+export function addItem(array, name, price, description, img, category){
 
-    let object = new Item( name, img, price, description);
+    let object = new Item( name, price, description, img, category);
     array.push(object);
 }
 
