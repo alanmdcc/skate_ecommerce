@@ -1,29 +1,28 @@
 //importar funciones del modulo card
-import {cardIndex, showProductsIndex} from './modules/card.js';
-import { addCart} from './modules/addCart.js';
+import { cardIndex, showProductsIndex } from './modules/card.js';
+import { addCart } from './modules/addCart.js';
 
 let html = '';
-let recommendedProducts = [
+let recommendedProducts = [];
+let idRecommendedProducts = [22, 21, 30];
 
-  {
-    "name" : "Octo Purple", 
-    "img" : "../assets/img-products/longboard/longboard1.png",
-    "price" : 1500, 
-    "description" : "Patineta con ilustracion de pulpo"
-  },
-  {
-    "name" : "Alien Invasion", 
-    "img" : "../assets/img-products/longboard/longboard2.png",
-    "price" : 1350, 
-    "description" : "Patineta con ilustracion de aliens"
-  },
-  {
-    "name" : "Dark Nightmare", 
-    "img" : "../assets/img-products/longboard/longboard3.png",
-    "price" : 1100, 
-    "description" : "Patineta con ilustracion de una pesadilla"
-  }
-];
-
-showProductsIndex(recommendedProducts, 'list-items');
-addCart();
+fetch(`http://localhost:8081/api/products/${idRecommendedProducts[0]}`)
+  .then(res => res.json())
+  .then(product => {
+    console.log(product);
+    recommendedProducts.push(product);
+    fetch(`http://localhost:8081/api/products/${idRecommendedProducts[1]}`)
+      .then(res => res.json())
+      .then(product => {
+        recommendedProducts.push(product);
+        fetch(`http://localhost:8081/api/products/${idRecommendedProducts[2]}`)
+          .then(res => res.json())
+          .then(product => {
+            recommendedProducts.push(product)
+            console.log(recommendedProducts);
+            showProductsIndex(recommendedProducts, 'list-items');
+            addCart();
+          })
+      })
+  })
+  .catch(error => console.error('Error:', error));
