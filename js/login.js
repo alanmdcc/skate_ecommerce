@@ -56,7 +56,15 @@ formulario.addEventListener('submit', (e) => {
     
     if(campos.email && campos.password){
     //se crea un objeto json del usuario y se añade a un array
-    
+    fetch("http://localhost:8081/api/users/login/")
+  .then(res => res.json())
+  .then(productsArray => {
+
+    showProducts(productsArray, 'list-items');
+    addCart();
+  })
+  .catch(error => console.error('Error:', error));
+
     formulario.reset();
         // document.getElementById('alert-success').classList.add('form--mensaje-exito-activo');
         // setTimeout(() => {

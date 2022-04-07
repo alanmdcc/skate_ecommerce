@@ -94,6 +94,41 @@ formulario.addEventListener('submit', (e) => {
     //se crea un objeto json del usuario y se añade a un array
         addUser(usuarios,username.value,userphone.value,userpass.value,useremail.value);
         /* console.log(usuarios); */
+        
+    var url = 'http://localhost:8081/api/users/';
+    
+    fetch(url, {
+      method: 'POST',
+      body:JSON.stringify({
+        userName: username.value,
+        userEmail: useremail.value,
+        userPhone: userphone.value,
+        password: userpass.value
+        }), 
+      headers:{
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+    
+    .then(response => { 
+        if(response){Swal.fire({
+        icon: 'success',
+        title: 'Éxito',
+        text: 'Registro exitoso',
+      }) ; console.log(response)}
+    else{
+        console.log(useremail.value);
+        {Swal.fire({
+            icon: 'error',
+            title: 'Registro fallido',
+            text: `La dirección de email ya está registrada`,
+          })  }
+    }
+    })
+    .catch(error => console.error('Error:', error))
+
+    ;
+
         formulario.reset();
 
         document.querySelectorAll('.is-valid').forEach((icono) => {
@@ -103,11 +138,7 @@ formulario.addEventListener('submit', (e) => {
         Object.keys(campos).forEach(campo => {
             campos[campo] = false;
         })
-        Swal.fire({
-            icon: 'success',
-            title: 'Éxito',
-            text: 'Registro exitoso',
-          })  
+        
 
     } else {
         Swal.fire({
@@ -133,5 +164,6 @@ reset.addEventListener('click', (e) => {
 	Object.keys(campos).forEach(campo => {
 		campos[campo] = false;
 	})
+
 }
 )
