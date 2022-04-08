@@ -90,8 +90,9 @@ let navbar = `
 navbarWrapper.innerHTML = navbar;
 
 let userLogged = window.sessionStorage.getItem("userLogged");
-let token = JSON.parse(window.sessionStorage.getItem("token")).accessToken;
-if (token != null && userLogged != null) {
+let tokenJSON = JSON.parse(window.sessionStorage.getItem("token"));
+if (tokenJSON != null && userLogged != null) {
+    let token = tokenJSON.accessToken;
     fetch("http://localhost:8081/api/admin/",
         {
             method: 'POST',
@@ -103,9 +104,17 @@ if (token != null && userLogged != null) {
         })
         .then(res => res.json())
         .then(isAdmin => {
+           /*  document.getElementsByClassName("hide-user")[0].classList.remove("hide-user"); */
             if (isAdmin) {
                 document.getElementsByClassName("hide-admin")[0].classList.remove("hide-admin");
             }
         })
         .catch(error => console.error('Error:', error));
 }
+
+/* let btnLogout = document.getElementById("btn-logout");
+btnLogout.addEventListener("click",(e)=>{
+    sessionStorage.removeItem("userLogged");
+    sessionStorage.removeItem("token");
+    location.reload();
+}) */
