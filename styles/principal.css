@@ -57,7 +57,7 @@ h2 {
     z-index: 1;
   }
   h2.linea:before {
-    border-top: 2px solid #610a0a;
+    border-top: 2px solid #000000;
     content: "";
     margin: 0 auto;
     position: absolute;
