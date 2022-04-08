@@ -77,7 +77,6 @@ function removeButton() {
 function createProduct(productosCarrito) {
 
     productosCarrito.forEach(product => {
-        console.log(product);
         //Creates the string for the new product in HTML
         newProductString = `
     <div  class="row first-row product-cart">
@@ -198,8 +197,6 @@ buyBtn.addEventListener("click", (e) => {
         for (let button of buttonArray) {
             button.disabled = true;
         }
-        console.log(userLoggedStr);
-        console.log(token);
         //Fetch para crear una nueva orden
         fetch("http://localhost:8081/api/iduser/", {
             method: "POST",
@@ -210,9 +207,6 @@ buyBtn.addEventListener("click", (e) => {
             }
         }).then(res => res.json())
             .then(idUser => {
-                console.log(idUser);
-                console.log(JSON.stringify({ "User_idUser": idUser }));
-               
                 fetch("http://localhost:8081/api/orders/", {
                     method: "POST",
                     body: JSON.stringify({ "user_idUser": idUser }),

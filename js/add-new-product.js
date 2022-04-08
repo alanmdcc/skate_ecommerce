@@ -28,8 +28,6 @@ function validateForm(){
     //Vamos a buscar dentro del arreglo formValuer 
     const valid = formValues.findIndex((value) => value == false);
     if(valid === -1){
-        console.log(price);
-        console.log(price.value);
         let productJSON = new Item(productName.value,price.value,description.value,filePath,categoryInput.value);
         let token = JSON.parse(window.sessionStorage.getItem("token")).accessToken;
         fetch("http://localhost:8081/api/products/",
@@ -158,15 +156,12 @@ fileInput.addEventListener('change', (e) => {
         switch(categoryInput.value){
             case "1":
                 categoryFolder = "skates/";
-                console.log("case1");
                 break;
             case "2":
                 categoryFolder = "longboard/";
-                console.log("case2");
                 break;
             case "3":
                 categoryFolder = "pennyboard/";
-                console.log("case3");
                 break;
         }
 
@@ -182,20 +177,15 @@ categoryInput.addEventListener('change', (e) => {
         switch(categoryInput.value){
             case "1":
                 categoryFolder = "skates/";
-                console.log("case1");
                 break;
             case "2":
                 categoryFolder = "longboard/";
-                console.log("case2");
                 break;
             case "3":
                 categoryFolder = "pennyboard/";
-                console.log("case3");
                 break;
         }
         filePath = "../assets/img-products/" + categoryFolder + fileInput.value.split("\\").pop();
-        console.log(filePath);
-
     }
     
 });
@@ -228,7 +218,6 @@ fetch("http://localhost:8081/api/category/")
       let tmpHTML ="";
       let categoryHTML = "";
     categoriesArray.forEach(category =>{
-        console.log(category);
         tmpHTML = `
         <option value="${category.idCategory}">${category.categoryName.charAt(0).toUpperCase()+category.categoryName.slice(1)}</option>
         `

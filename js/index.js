@@ -9,7 +9,6 @@ let idRecommendedProducts = [22, 21, 30];
 fetch(`http://localhost:8081/api/products/${idRecommendedProducts[0]}`)
   .then(res => res.json())
   .then(product => {
-    console.log(product);
     recommendedProducts.push(product);
     fetch(`http://localhost:8081/api/products/${idRecommendedProducts[1]}`)
       .then(res => res.json())
@@ -19,7 +18,6 @@ fetch(`http://localhost:8081/api/products/${idRecommendedProducts[0]}`)
           .then(res => res.json())
           .then(product => {
             recommendedProducts.push(product)
-            console.log(recommendedProducts);
             showProductsIndex(recommendedProducts, 'list-items');
             addCart();
           })
@@ -46,7 +44,6 @@ fetch(`http://localhost:8081/api/products/${idRecommendedProducts[0]}`)
             if (isAdmin) {
                 document.getElementsByClassName("hide-admin")[0].classList.remove("hide-admin");
             }else{
-                console.log("falseadmin");
             }
         })
         .catch(error => console.error('Error:', error));

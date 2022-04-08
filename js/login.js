@@ -57,7 +57,6 @@ formulario.addEventListener('submit', (e) => {
     
     if(campos.email && campos.password){
     //se crea un objeto json del usuario y se añade a un array
-    console.log(userpass.value);
     fetch(url, {
         method: 'POST',
         body:JSON.stringify({
@@ -70,7 +69,6 @@ formulario.addEventListener('submit', (e) => {
       }).then(res => res.json())
       
       .then(response => { 
-          console.log(response);
           if(response.accessToken.length!==0){Swal.fire({
           icon: 'success',
           title: 'Éxito',
@@ -81,7 +79,6 @@ formulario.addEventListener('submit', (e) => {
             formulario.reset();
             setTimeout(()=>{window.location.href = "../index.html"},2000);
         }else{
-          console.log(useremail.value);
           {Swal.fire({
               icon: 'error',
               title: 'Inicio de sesión fallido',

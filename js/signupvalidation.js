@@ -93,7 +93,6 @@ formulario.addEventListener('submit', (e) => {
     if(campos.Name && campos.email && campos.Cellphone && campos.password){
     //se crea un objeto json del usuario y se añade a un array
         addUser(usuarios,username.value,userphone.value,userpass.value,useremail.value);
-        /* console.log(usuarios); */
         
     var url = 'http://localhost:8081/api/users/';
     
@@ -115,9 +114,8 @@ formulario.addEventListener('submit', (e) => {
         icon: 'success',
         title: 'Éxito',
         text: 'Registro exitoso',
-      }) ; console.log(response)}
+      }) ; }
     else{
-        console.log(useremail.value);
         {Swal.fire({
             icon: 'error',
             title: 'Registro fallido',

@@ -57,7 +57,7 @@ let navbar = `
                 <div class="col-lg-3 col-md-3 col-4 p-0 d-flex justify-content-around align-items-center">
                     
                     <button class="btn-icon hide-admin">
-                    <a href="../pages/add-new-procuct.html">
+                    <a href="../pages/add-new-product.html">
                         <img class="img-icon" src="../assets/icons/iconomas_menu_100x100-10.svg" alt="">
                     </a>
                     </button><!--add new product-->
