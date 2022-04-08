@@ -56,9 +56,9 @@ let navbar = `
 
                 <div class="col-lg-3 col-md-3 col-4 p-0 d-flex justify-content-around align-items-center">
                     
-                    <button class="btn-icon">
+                    <button class="btn-icon hide-admin">
                     <a href="../pages/add-new-procuct.html">
-                        <img class="img-icon hide-admin" src="../assets/icons/iconomas_menu_100x100-10.svg" alt="">
+                        <img class="img-icon" src="../assets/icons/iconomas_menu_100x100-10.svg" alt="">
                     </a>
                     </button><!--add new product-->
 
@@ -80,6 +80,12 @@ let navbar = `
                         <img class="img-icon" src="../assets/icons/carrito_barmenu_100x100.svg" alt="">
                     </a>
                     </button><!--cart-->
+
+                    <button class="btn-icon hide-admin">
+                          <a href="../pages/cart.html">
+                            <img class="img-icon" src="./assets/icons/loggout.svg" alt="">
+                          </a>
+                        </button><!--logout-->
 
                 </div>
 
