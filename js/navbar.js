@@ -81,9 +81,9 @@ let navbar = `
                     </a>
                     </button><!--cart-->
 
-                    <button class="btn-icon hide-admin">
-                          <a href="../pages/cart.html">
-                            <img class="img-icon" src="./assets/icons/loggout.svg" alt="">
+                    <button class="btn-icon hide-user" id="btn-logout">
+                          <a href="#">
+                            <img class="img-icon" src="../assets/icons/loggout.svg" alt="">
                           </a>
                         </button><!--logout-->
 
@@ -110,7 +110,7 @@ if (tokenJSON != null && userLogged != null) {
         })
         .then(res => res.json())
         .then(isAdmin => {
-           /*  document.getElementsByClassName("hide-user")[0].classList.remove("hide-user"); */
+            document.getElementsByClassName("hide-user")[0].classList.remove("hide-user");
             if (isAdmin) {
                 document.getElementsByClassName("hide-admin")[0].classList.remove("hide-admin");
             }
@@ -118,9 +118,9 @@ if (tokenJSON != null && userLogged != null) {
         .catch(error => console.error('Error:', error));
 }
 
-/* let btnLogout = document.getElementById("btn-logout");
+let btnLogout = document.getElementById("btn-logout");
 btnLogout.addEventListener("click",(e)=>{
     sessionStorage.removeItem("userLogged");
     sessionStorage.removeItem("token");
     location.reload();
-}) */
+})

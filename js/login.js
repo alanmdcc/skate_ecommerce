@@ -79,6 +79,7 @@ formulario.addEventListener('submit', (e) => {
         window.sessionStorage.setItem("token", JSON.stringify(response));
         window.sessionStorage.setItem("userLogged", JSON.stringify({ userEmail: useremail.value }));
             formulario.reset();
+            setTimeout(()=>{window.location.href = "../index.html"},2000);
         }else{
           console.log(useremail.value);
           {Swal.fire({
@@ -101,7 +102,7 @@ formulario.addEventListener('submit', (e) => {
             campos[campo] = false;
         })
    
-        setTimeout(()=>{window.location.href = "../index.html"},2000);
+        
     } else {
         document.getElementById('alert-danger').classList.add('form--mensaje-activo');
         setTimeout(() => {

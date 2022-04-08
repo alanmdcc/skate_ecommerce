@@ -42,8 +42,8 @@ fetch(`http://localhost:8081/api/products/${idRecommendedProducts[0]}`)
         })
         .then(res => res.json())
         .then(isAdmin => {
+          document.getElementsByClassName("hide-user")[0].classList.remove("hide-user");
             if (isAdmin) {
-                console.log("trueAdmin");
                 document.getElementsByClassName("hide-admin")[0].classList.remove("hide-admin");
             }else{
                 console.log("falseadmin");
@@ -51,3 +51,10 @@ fetch(`http://localhost:8081/api/products/${idRecommendedProducts[0]}`)
         })
         .catch(error => console.error('Error:', error));
 }
+
+let btnLogout = document.getElementById("btn-logout");
+btnLogout.addEventListener("click",(e)=>{
+    sessionStorage.removeItem("userLogged");
+    sessionStorage.removeItem("token");
+    location.reload();
+})

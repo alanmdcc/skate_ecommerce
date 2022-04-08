@@ -1,8 +1,8 @@
-INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'Fulanito', '55055', 'fulanito@gmail.com', 'password', '0');
-INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'Manuel Aguirre', '558944', 'maguirre@gmail.com', 'ipn rifa', '0');
-INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'Alan Martin del Campo', '558947', 'alandc@gmail.com', 'udeg rifa', '0');
-INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'Andres Arellano', '558948', 'andresab@gmail.com', 'ipn rifa', '0');
-INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'David Martinez', '558949', 'dmtz@gmail.com', 'uam rifa', '0');
+INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'Fulanito', '55055', 'fulanito@gmail.com', 'bbf051a980fb32bd73799191bff3679c766fac796ce4d4839fa09c1fb6e22ea4', '0');
+INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'Manuel Aguirre', '558944', 'maguirre@gmail.com', 'bbf051a980fb32bd73799191bff3679c766fac796ce4d4839fa09c1fb6e22ea4', '1');
+INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'Alan Martin del Campo', '558947', 'alandc@gmail.com', 'bbf051a980fb32bd73799191bff3679c766fac796ce4d4839fa09c1fb6e22ea4', '1');
+INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'Andres Arellano', '558948', 'andresab@gmail.com', 'bbf051a980fb32bd73799191bff3679c766fac796ce4d4839fa09c1fb6e22ea4', '1');
+INSERT INTO `impuls8`.`user` ( `userName`, `userPhone`, `userEmail`, `password`, `isAdmin`) VALUES ( 'David Martinez', '558949', 'dmtz@gmail.com', 'bbf051a980fb32bd73799191bff3679c766fac796ce4d4839fa09c1fb6e22ea4', '1');
 
 INSERT INTO `impuls8`.`category` (`categoryName`) VALUES ('skateboards');
 INSERT INTO `impuls8`.`category` ( `categoryName`) VALUES ('longboards');
