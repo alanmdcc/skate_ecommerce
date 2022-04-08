@@ -189,9 +189,9 @@ text-align: center;
  .card {
     width: 100%;
     justify-content: center;
-    display: inline;
-    
+    display: inline
   }
+  
   .texto-img{
     font-size:large;
    }
@@ -208,13 +208,6 @@ text-align: center;
   .center{
     width: 100%;
     height: 200px;
-  }
-  
-}
-
-@media screen and (max-width:768px){
-  .carousel-item .img{
-      src:   url(../assets/img-bg-contact/bg-contact-sm.PNG);
   }
   
 }
