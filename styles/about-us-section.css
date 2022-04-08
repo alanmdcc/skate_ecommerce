@@ -110,7 +110,8 @@
 #middle-circle-8{
     top: 120px;
     left: 832px;
-    background-color: #262625;
+    background-image: url(../assets/about-us-pictures/generation.png);
+    background-size: cover;
 }
 
 #middle-circle-9{
