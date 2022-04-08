@@ -74,26 +74,25 @@ formulario.addEventListener('submit', (e) => {
           if(response.accessToken.length!==0){Swal.fire({
           icon: 'success',
           title: 'Éxito',
-          text: 'Inicio de sesión exitoso',
-        }); window.sessionStorage.setItem("token", JSON.stringify(response));
-        window.sessionStorage.setItem("userLogged", JSON.stringify(
-            { userEmail: useremail.value }
-        ));
-    }
-      else{
+          text: 'Inicio de sesión exitoso'
+        }); 
+        window.sessionStorage.setItem("token", JSON.stringify(response));
+        window.sessionStorage.setItem("userLogged", JSON.stringify({ userEmail: useremail.value }));
+            formulario.reset();
+        }else{
           console.log(useremail.value);
           {Swal.fire({
               icon: 'error',
               title: 'Inicio de sesión fallido',
-              text: `Email o contraseña inválidos`,
+              text: `Email o contraseña inválidos`
             })  }
+            formulario.reset();
       }
       })
       .catch(error => console.error('Error:', error))
   
       ;
 
-    formulario.reset();
     document.querySelectorAll('.is-valid').forEach((icono) => {
         icono.classList.remove('is-valid');
     });

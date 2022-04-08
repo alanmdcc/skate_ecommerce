@@ -77,7 +77,7 @@ function removeButton() {
 function createProduct(productosCarrito) {
 
     productosCarrito.forEach(product => {
-
+        console.log(product);
         //Creates the string for the new product in HTML
         newProductString = `
     <div  class="row first-row product-cart">
@@ -158,10 +158,7 @@ body.addEventListener("change", function (e) {
 });//addEventListener change inputs
 
 
-let userLogged = [{
-    "idUser": 1
-}]
-let userLoggedStr = JSON.stringify("userLogged", userLogged);
+
 ////////
 
 //Se agrega funcionalidades al botón de "Hacer Pedido"

@@ -26,3 +26,27 @@ fetch(`http://localhost:8081/api/products/${idRecommendedProducts[0]}`)
       })
   })
   .catch(error => console.error('Error:', error));
+
+let userLogged = window.sessionStorage.getItem("userLogged");
+let token = JSON.parse(window.sessionStorage.getItem("token")).accessToken;
+if (token != null && userLogged != null) {
+    fetch("http://localhost:8081/api/admin/",
+        {
+            method: 'POST',
+            body: userLogged,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Impuls8 ' + token
+            }
+        })
+        .then(res => res.json())
+        .then(isAdmin => {
+            if (isAdmin) {
+                console.log("trueAdmin");
+                document.getElementsByClassName("hide-admin")[0].classList.remove("hide-admin");
+            }else{
+                console.log("falseadmin");
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}

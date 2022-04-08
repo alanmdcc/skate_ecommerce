@@ -238,3 +238,26 @@ fetch("http://localhost:8081/api/category/")
     
   })
   .catch(error => console.error('Error:', error));
+
+let userLogged = window.sessionStorage.getItem("userLogged");
+let token = JSON.parse(window.sessionStorage.getItem("token")).accessToken;
+if (token != null && userLogged != null) {
+    fetch("http://localhost:8081/api/admin/",
+        {
+            method: 'POST',
+            body: userLogged,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Impuls8 ' + token
+            }
+        })
+        .then(res => res.json())
+        .then(isAdmin => {
+            if (!isAdmin) {
+                window.location.href = "../pages/login.html"
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}else{
+    window.location.href = "../pages/login.html"
+}
