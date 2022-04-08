@@ -240,8 +240,9 @@ fetch("http://localhost:8081/api/category/")
   .catch(error => console.error('Error:', error));
 
 let userLogged = window.sessionStorage.getItem("userLogged");
-let token = JSON.parse(window.sessionStorage.getItem("token")).accessToken;
-if (token != null && userLogged != null) {
+let tokenJSON = JSON.parse(window.sessionStorage.getItem("token"));
+if (tokenJSON != null && userLogged != null) {
+    let token = tokenJSON.accessToken;
     fetch("http://localhost:8081/api/admin/",
         {
             method: 'POST',

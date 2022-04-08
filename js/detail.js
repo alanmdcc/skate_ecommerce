@@ -16,7 +16,7 @@ function crearTarjeta(product){
             </div>
         </section>
         <div class="shop text-center pstn-btn-cart">
-          <a href="./cart.html?name=${product.nameProduct}"><img src="../assets/icons/carrito_barmenu_100x100.png" class="btn-cart img-cart" id="img-cart" alt="cart"></a>
+          <a href="./cart.html?id=${product.idProduct}"><img src="../assets/icons/carrito_barmenu_100x100.png" class="btn-cart img-cart" id="img-cart" alt="cart"></a>
         </div>
     `
     ancla.innerHTML = cardProduct

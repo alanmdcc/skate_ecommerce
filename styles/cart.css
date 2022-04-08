@@ -74,6 +74,20 @@ body {
   color: white;
 }
 
+.button-buy-cart{
+  font-weight: bold;
+  background-color: #F2C74A;
+  border-radius: 32px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+}
+
+.button-buy-cart:hover{
+  background-color:#DA2B3B;
+  color: white;
+}
+
 .hide{
-  display: none;
+  display:none;
 }

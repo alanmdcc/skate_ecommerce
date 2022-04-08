@@ -124,8 +124,9 @@ function createProduct(productosCarrito) {
 
 let productosStorage = localStorage.getItem("productosCarrito");
 let productosCarrito = JSON.parse(productosStorage);
-createProduct(productosCarrito);
-
+if (productosCarrito != null) {
+    createProduct(productosCarrito);
+}
 //Actualiza la propiedad de quantity del producto afectado en el LocalStorage
 function updateQuantity(element, newQuantity) {
     let productosStorage = localStorage.getItem("productosCarrito");
@@ -162,20 +163,30 @@ body.addEventListener("change", function (e) {
 ////////
 
 //Se agrega funcionalidades al botón de "Hacer Pedido"
-/* let buyBtn = document.getElementsByClassName("button-buy-cart")[0];
+let buyBtn = document.getElementsByClassName("button-buy-cart")[0];
 buyBtn.addEventListener("click", (e) => {
     //Se extren variables del local storage
-    let userLoggedStr = localStorage.getItem("userLogged");
+    let userLoggedStr = sessionStorage.getItem("userLogged");
     let userLogged = JSON.parse(userLoggedStr);
     let productsCartStr = localStorage.getItem("productosCarrito");
     let productsCart = JSON.parse(productsCartStr);
+    let tokenJSON = JSON.parse(window.sessionStorage.getItem("token"));
 
-    if (productsCart == null || productsCart.lenght === 0) {
+    if (productsCart == null || productsCart.length === 0) {
         Swal.fire({
             icon: 'error',
             text: 'Favor de agregar productos al carrito',
         })
+    } else if (tokenJSON == null || userLogged == null) {
+        Swal.fire({
+            icon: 'error',
+            text: 'Favor de iniciar sesión',
+        })
     } else {
+        let token = tokenJSON.accessToken;
+
+
+
         //Se deshabilitan inputs
         let inputArray = document.getElementsByTagName("input")
         for (let input of inputArray) {
@@ -187,41 +198,64 @@ buyBtn.addEventListener("click", (e) => {
         for (let button of buttonArray) {
             button.disabled = true;
         }
-
+        console.log(userLoggedStr);
+        console.log(token);
         //Fetch para crear una nueva orden
-        fetch("http://localhost:8081/api/orders/", {
+        fetch("http://localhost:8081/api/iduser/", {
             method: "POST",
-            body: {
-                "usuario_idUser": userLogged.idUser
-            },
+            body: userLoggedStr,
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': 'Impuls8 ' + token
             }
-        })
-            .then(res => res.json())
-            .then(userOrder => {
-                productsCart.forEach((product) => {
-                    let orderProductQuantity = {
-                        "orderProductQuantityId": {
-                            "userOrder_idUserOrder": userOrder.idUserOrder,
-                            "product_idProduct": product.idProduct
-                        },
-                        "quantity": product.quantity
+        }).then(res => res.json())
+            .then(idUser => {
+                console.log(idUser);
+                console.log(JSON.stringify({ "User_idUser": idUser }));
+               
+                fetch("http://localhost:8081/api/orders/", {
+                    method: "POST",
+                    body: JSON.stringify({ "user_idUser": idUser }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Impuls8 ' + token
                     }
-                    fetch("http://localhost:8081/api/ordersqty/", {
-                        method: "POST",
-                        body: {
-                            orderProductQuantity
-                        },
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
                 })
+                    .then(res => res.json())
+                    .then(userOrder => {
+                        let title = document.getElementById("title-cart");
+                        let orderNumber = `Orden #${userOrder.idUserOrder}`;
+                        title.innerText = orderNumber;
+                        Swal.fire({
+                            icon: 'success',
+                            title: '¡Gracias por tu pedido!',
+                            text: 'Tu orden fue generada con éxito'
+                        })
+                        productsCart.forEach((product) => {
+                            let orderProductQuantity = {
+                                "orderProductQuantityId": {
+                                    "userOrder_idUserOrder": userOrder.idUserOrder,
+                                    "product_idProduct": product.idProduct
+                                },
+                                "quantity": product.quantity
+                            }
+                            fetch("http://localhost:8081/api/ordersqty/", {
+                                method: "POST",
+                                body: JSON.stringify(orderProductQuantity),
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': 'Impuls8 ' + token
+                                }
+                            })
+                        })
+                        localStorage.removeItem("productosCarrito")
+                    })
             })
+
+
             .catch(error => console.error('Error:', error));
     }//if null
-});//addEventListener click buy button */
+});//addEventListener click buy button
 
 
 removeButton(); //Se agrega evento para borrar artículo
